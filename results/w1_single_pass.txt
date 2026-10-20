@@ -1,0 +1,2 @@
+removed_volume_mm3: 1162.0650
+cell_size_mm: 0.05
