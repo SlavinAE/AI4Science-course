@@ -1,0 +1,29 @@
+........................................................................ [ 17%]
+........................................................................ [ 35%]
+........................................................................ [ 52%]
+........................................................................ [ 70%]
+........................................................................ [ 88%]
+........................................F.......                         [100%]
+=================================== FAILURES ===================================
+_______________________ test_mutant_is_caught[P4-strict] _______________________
+
+prop = 'P4', mut = 'strict', run = <function <lambda> at 0x777445c771a0>
+
+    @pytest.mark.skipif(H.impl_default() != "21a0d91", reason="мутанты проверяются на проверяемом снимке 21a0d91")
+    @pytest.mark.parametrize("prop,mut,run", CASES, ids=[f"{p}-{m}" for p, m, _ in CASES])
+    def test_mutant_is_caught(prop, mut, run):
+        r = run(mut)
+>       assert r["violations"] > 0, f"{prop} не падает на мутанте {mut}: {r}"
+E       AssertionError: P4 не падает на мутанте strict: {'violations': 0, 'no_class': 0, 'pct_sum': 100.0, 'within_pct': 93.84}
+E       assert 0 > 0
+
+checks/test_sensitivity.py:32: AssertionError
+=============================== warnings summary ===============================
+checks/test_props.py::test_p7_sweep[flat-horiz]
+  /home/jovyan/users/slavin/AI4Science/task/.venv/lib/python3.12/site-packages/numba/np/ufunc/parallel.py:373: NumbaWarning: The TBB threading layer requires TBB version 2021 update 6 or later i.e., TBB_INTERFACE_VERSION >= 12060. Found TBB_INTERFACE_VERSION = 12050. The TBB threading layer is disabled.
+    warnings.warn(problem)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED checks/test_sensitivity.py::test_mutant_is_caught[P4-strict] - Asserti...
+1 failed, 407 passed, 1 warning in 84.19s (0:01:24)

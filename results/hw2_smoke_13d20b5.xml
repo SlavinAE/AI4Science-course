@@ -1,0 +1,1523 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="149" skipped="35" tests="408" time="134.745" timestamp="2026-11-08T22:14:32.834833+03:00" hostname="airi-3-0"><testcase classname="checks.test_props" name="test_snapshot_integrity" time="0.011" /><testcase classname="checks.test_props" name="test_p1_identity[id]" time="1.103" /><testcase classname="checks.test_props" name="test_p1_identity[shift]" time="0.162" /><testcase classname="checks.test_props" name="test_p1_identity[rx]" time="0.161" /><testcase classname="checks.test_props" name="test_p1_identity[ry]" time="0.165" /><testcase classname="checks.test_props" name="test_p1_identity[rz]" time="0.165" /><testcase classname="checks.test_props" name="test_p2_threshold[x--0.02]" time="0.394" /><testcase classname="checks.test_props" name="test_p2_threshold[x--0.05]" time="0.392" /><testcase classname="checks.test_props" name="test_p2_threshold[x--0.09]" time="0.397" /><testcase classname="checks.test_props" name="test_p2_threshold[x--0.0999]" time="0.398" /><testcase classname="checks.test_props" name="test_p2_threshold[x--0.1]" time="0.400" /><testcase classname="checks.test_props" name="test_p2_threshold[x--0.1001]" time="0.404"><failure message="AssertionError: {'violations': 1292, 'band': 0, 'points': 20000, 'truth_out': 1292, ...}&#10;assert 1292 == 0">face = 'x-', d = 0.1001
+
+    @pytest.mark.parametrize("d", SIGNED)
+    @pytest.mark.parametrize("face", list(H.FACES))
+    def test_p2_threshold(face, d):
+        r = Pr.p2_threshold(IMPL, N, SEED, face, d)
+&gt;       assert r["violations"] == 0, r
+E       AssertionError: {'violations': 1292, 'band': 0, 'points': 20000, 'truth_out': 1292, ...}
+E       assert 1292 == 0
+
+checks/test_props.py:35: AssertionError</failure></testcase><testcase classname="checks.test_props" name="test_p2_threshold[x--0.11]" time="0.534"><failure message="AssertionError: {'violations': 1292, 'band': 0, 'points': 20000, 'truth_out': 1292, ...}&#10;assert 1292 == 0">face = 'x-', d = 0.11
+
+    @pytest.mark.parametrize("d", SIGNED)
+    @pytest.mark.parametrize("face", list(H.FACES))
+    def test_p2_threshold(face, d):
+        r = Pr.p2_threshold(IMPL, N, SEED, face, d)
+&gt;       assert r["violations"] == 0, r
+E       AssertionError: {'violations': 1292, 'band': 0, 'points': 20000, 'truth_out': 1292, ...}
+E       assert 1292 == 0
+
+checks/test_props.py:35: AssertionError</failure></testcase><testcase classname="checks.test_props" name="test_p2_threshold[x--0.12]" time="0.393"><failure message="AssertionError: {'violations': 1292, 'band': 0, 'points': 20000, 'truth_out': 1292, ...}&#10;assert 1292 == 0">face = 'x-', d = 0.12
+
+    @pytest.mark.parametrize("d", SIGNED)
+    @pytest.mark.parametrize("face", list(H.FACES))
+    def test_p2_threshold(face, d):
+        r = Pr.p2_threshold(IMPL, N, SEED, face, d)
+&gt;       assert r["violations"] == 0, r
+E       AssertionError: {'violations': 1292, 'band': 0, 'points': 20000, 'truth_out': 1292, ...}
+E       assert 1292 == 0
+
+checks/test_props.py:35: AssertionError</failure></testcase><testcase classname="checks.test_props" name="test_p2_threshold[x--0.15]" time="0.390" /><testcase classname="checks.test_props" name="test_p2_threshold[x--0.3]" time="0.389" /><testcase classname="checks.test_props" name="test_p2_threshold[x---0.02]" time="0.391"><failure message="AssertionError: {'violations': 7, 'band': 0, 'points': 20000, 'truth_out': 7, ...}&#10;assert 7 == 0">face = 'x-', d = -0.02
+
+    @pytest.mark.parametrize("d", SIGNED)
+    @pytest.mark.parametrize("face", list(H.FACES))
+    def test_p2_threshold(face, d):
+        r = Pr.p2_threshold(IMPL, N, SEED, face, d)
+&gt;       assert r["violations"] == 0, r
+E       AssertionError: {'violations': 7, 'band': 0, 'points': 20000, 'truth_out': 7, ...}
+E       assert 7 == 0
+
+checks/test_props.py:35: AssertionError</failure></testcase><testcase classname="checks.test_props" name="test_p2_threshold[x---0.05]" time="0.392"><failure message="AssertionError: {'violations': 4, 'band': 0, 'points': 20000, 'truth_out': 14, ...}&#10;assert 4 == 0">face = 'x-', d = -0.05
+
+    @pytest.mark.parametrize("d", SIGNED)
+    @pytest.mark.parametrize("face", list(H.FACES))
+    def test_p2_threshold(face, d):
+        r = Pr.p2_threshold(IMPL, N, SEED, face, d)
+&gt;       assert r["violations"] == 0, r
+E       AssertionError: {'violations': 4, 'band': 0, 'points': 20000, 'truth_out': 14, ...}
+E       assert 4 == 0
+
+checks/test_props.py:35: AssertionError</failure></testcase><testcase classname="checks.test_props" name="test_p2_threshold[x---0.09]" time="0.392"><failure message="AssertionError: {'violations': 8, 'band': 0, 'points': 20000, 'truth_out': 26, ...}&#10;assert 8 == 0">face = 'x-', d = -0.09
+
+    @pytest.mark.parametrize("d", SIGNED)
+    @pytest.mark.parametrize("face", list(H.FACES))
+    def test_p2_threshold(face, d):
+        r = Pr.p2_threshold(IMPL, N, SEED, face, d)
+&gt;       assert r["violations"] == 0, r
+E       AssertionError: {'violations': 8, 'band': 0, 'points': 20000, 'truth_out': 26, ...}
+E       assert 8 == 0
+
+checks/test_props.py:35: AssertionError</failure></testcase><testcase classname="checks.test_props" name="test_p2_threshold[x---0.0999]" time="0.392"><failure message="AssertionError: {'violations': 8, 'band': 0, 'points': 20000, 'truth_out': 28, ...}&#10;assert 8 == 0">face = 'x-', d = -0.0999
+
+    @pytest.mark.parametrize("d", SIGNED)
+    @pytest.mark.parametrize("face", list(H.FACES))
+    def test_p2_threshold(face, d):
+        r = Pr.p2_threshold(IMPL, N, SEED, face, d)
+&gt;       assert r["violations"] == 0, r
+E       AssertionError: {'violations': 8, 'band': 0, 'points': 20000, 'truth_out': 28, ...}
+E       assert 8 == 0
+
+checks/test_props.py:35: AssertionError</failure></testcase><testcase classname="checks.test_props" name="test_p2_threshold[x---0.1]" time="0.391"><failure message="AssertionError: {'violations': 8, 'band': 1292, 'points': 20000, 'truth_out': 28, ...}&#10;assert 8 == 0">face = 'x-', d = -0.1
+
+    @pytest.mark.parametrize("d", SIGNED)
+    @pytest.mark.parametrize("face", list(H.FACES))
+    def test_p2_threshold(face, d):
+        r = Pr.p2_threshold(IMPL, N, SEED, face, d)
+&gt;       assert r["violations"] == 0, r
+E       AssertionError: {'violations': 8, 'band': 1292, 'points': 20000, 'truth_out': 28, ...}
+E       assert 8 == 0
+
+checks/test_props.py:35: AssertionError</failure></testcase><testcase classname="checks.test_props" name="test_p2_threshold[x---0.1001]" time="0.391"><failure message="AssertionError: {'violations': 1300, 'band': 0, 'points': 20000, 'truth_out': 1320, ...}&#10;assert 1300 == 0">face = 'x-', d = -0.1001
+
+    @pytest.mark.parametrize("d", SIGNED)
+    @pytest.mark.parametrize("face", list(H.FACES))
+    def test_p2_threshold(face, d):
+        r = Pr.p2_threshold(IMPL, N, SEED, face, d)
+&gt;       assert r["violations"] == 0, r
+E       AssertionError: {'violations': 1300, 'band': 0, 'points': 20000, 'truth_out': 1320, ...}
+E       assert 1300 == 0
+
+checks/test_props.py:35: AssertionError</failure></testcase><testcase classname="checks.test_props" name="test_p2_threshold[x---0.11]" time="0.392"><failure message="AssertionError: {'violations': 1298, 'band': 0, 'points': 20000, 'truth_out': 1321, ...}&#10;assert 1298 == 0">face = 'x-', d = -0.11
+
+    @pytest.mark.parametrize("d", SIGNED)
+    @pytest.mark.parametrize("face", list(H.FACES))
+    def test_p2_threshold(face, d):
+        r = Pr.p2_threshold(IMPL, N, SEED, face, d)
+&gt;       assert r["violations"] == 0, r
+E       AssertionError: {'violations': 1298, 'band': 0, 'points': 20000, 'truth_out': 1321, ...}
+E       assert 1298 == 0
+
+checks/test_props.py:35: AssertionError</failure></testcase><testcase classname="checks.test_props" name="test_p2_threshold[x---0.12]" time="0.391"><failure message="AssertionError: {'violations': 1294, 'band': 0, 'points': 20000, 'truth_out': 1322, ...}&#10;assert 1294 == 0">face = 'x-', d = -0.12
+
+    @pytest.mark.parametrize("d", SIGNED)
+    @pytest.mark.parametrize("face", list(H.FACES))
+    def test_p2_threshold(face, d):
+        r = Pr.p2_threshold(IMPL, N, SEED, face, d)
+&gt;       assert r["violations"] == 0, r
+E       AssertionError: {'violations': 1294, 'band': 0, 'points': 20000, 'truth_out': 1322, ...}
+E       assert 1294 == 0
+
+checks/test_props.py:35: AssertionError</failure></testcase><testcase classname="checks.test_props" name="test_p2_threshold[x---0.15]" time="0.391"><failure message="AssertionError: {'violations': 2, 'band': 0, 'points': 20000, 'truth_out': 1325, ...}&#10;assert 2 == 0">face = 'x-', d = -0.15
+
+    @pytest.mark.parametrize("d", SIGNED)
+    @pytest.mark.parametrize("face", list(H.FACES))
+    def test_p2_threshold(face, d):
+        r = Pr.p2_threshold(IMPL, N, SEED, face, d)
+&gt;       assert r["violations"] == 0, r
+E       AssertionError: {'violations': 2, 'band': 0, 'points': 20000, 'truth_out': 1325, ...}
+E       assert 2 == 0
+
+checks/test_props.py:35: AssertionError</failure></testcase><testcase classname="checks.test_props" name="test_p2_threshold[x---0.3]" time="0.388"><failure message="AssertionError: {'violations': 5, 'band': 0, 'points': 20000, 'truth_out': 1347, ...}&#10;assert 5 == 0">face = 'x-', d = -0.3
+
+    @pytest.mark.parametrize("d", SIGNED)
+    @pytest.mark.parametrize("face", list(H.FACES))
+    def test_p2_threshold(face, d):
+        r = Pr.p2_threshold(IMPL, N, SEED, face, d)
+&gt;       assert r["violations"] == 0, r
+E       AssertionError: {'violations': 5, 'band': 0, 'points': 20000, 'truth_out': 1347, ...}
+E       assert 5 == 0
+
+checks/test_props.py:35: AssertionError</failure></testcase><testcase classname="checks.test_props" name="test_p2_threshold[x+-0.02]" time="0.393" /><testcase classname="checks.test_props" name="test_p2_threshold[x+-0.05]" time="0.392" /><testcase classname="checks.test_props" name="test_p2_threshold[x+-0.09]" time="0.390" /><testcase classname="checks.test_props" name="test_p2_threshold[x+-0.0999]" time="0.389" /><testcase classname="checks.test_props" name="test_p2_threshold[x+-0.1]" time="0.388" /><testcase classname="checks.test_props" name="test_p2_threshold[x+-0.1001]" time="0.383"><failure message="AssertionError: {'violations': 1261, 'band': 0, 'points': 20000, 'truth_out': 1261, ...}&#10;assert 1261 == 0">face = 'x+', d = 0.1001
+
+    @pytest.mark.parametrize("d", SIGNED)
+    @pytest.mark.parametrize("face", list(H.FACES))
+    def test_p2_threshold(face, d):
+        r = Pr.p2_threshold(IMPL, N, SEED, face, d)
+&gt;       assert r["violations"] == 0, r
+E       AssertionError: {'violations': 1261, 'band': 0, 'points': 20000, 'truth_out': 1261, ...}
+E       assert 1261 == 0
+
+checks/test_props.py:35: AssertionError</failure></testcase><testcase classname="checks.test_props" name="test_p2_threshold[x+-0.11]" time="0.384"><failure message="AssertionError: {'violations': 1261, 'band': 0, 'points': 20000, 'truth_out': 1261, ...}&#10;assert 1261 == 0">face = 'x+', d = 0.11
+
+    @pytest.mark.parametrize("d", SIGNED)
+    @pytest.mark.parametrize("face", list(H.FACES))
+    def test_p2_threshold(face, d):
+        r = Pr.p2_threshold(IMPL, N, SEED, face, d)
+&gt;       assert r["violations"] == 0, r
+E       AssertionError: {'violations': 1261, 'band': 0, 'points': 20000, 'truth_out': 1261, ...}
+E       assert 1261 == 0
+
+checks/test_props.py:35: AssertionError</failure></testcase><testcase classname="checks.test_props" name="test_p2_threshold[x+-0.12]" time="0.400"><failure message="AssertionError: {'violations': 1261, 'band': 0, 'points': 20000, 'truth_out': 1261, ...}&#10;assert 1261 == 0">face = 'x+', d = 0.12
+
+    @pytest.mark.parametrize("d", SIGNED)
+    @pytest.mark.parametrize("face", list(H.FACES))
+    def test_p2_threshold(face, d):
+        r = Pr.p2_threshold(IMPL, N, SEED, face, d)
+&gt;       assert r["violations"] == 0, r
+E       AssertionError: {'violations': 1261, 'band': 0, 'points': 20000, 'truth_out': 1261, ...}
+E       assert 1261 == 0
+
+checks/test_props.py:35: AssertionError</failure></testcase><testcase classname="checks.test_props" name="test_p2_threshold[x+-0.15]" time="0.391"><failure message="AssertionError: {'violations': 3, 'band': 0, 'points': 20000, 'truth_out': 1261, ...}&#10;assert 3 == 0">face = 'x+', d = 0.15
+
+    @pytest.mark.parametrize("d", SIGNED)
+    @pytest.mark.parametrize("face", list(H.FACES))
+    def test_p2_threshold(face, d):
+        r = Pr.p2_threshold(IMPL, N, SEED, face, d)
+&gt;       assert r["violations"] == 0, r
+E       AssertionError: {'violations': 3, 'band': 0, 'points': 20000, 'truth_out': 1261, ...}
+E       assert 3 == 0
+
+checks/test_props.py:35: AssertionError</failure></testcase><testcase classname="checks.test_props" name="test_p2_threshold[x+-0.3]" time="0.539"><failure message="AssertionError: {'violations': 3, 'band': 0, 'points': 20000, 'truth_out': 1261, ...}&#10;assert 3 == 0">face = 'x+', d = 0.3
+
+    @pytest.mark.parametrize("d", SIGNED)
+    @pytest.mark.parametrize("face", list(H.FACES))
+    def test_p2_threshold(face, d):
+        r = Pr.p2_threshold(IMPL, N, SEED, face, d)
+&gt;       assert r["violations"] == 0, r
+E       AssertionError: {'violations': 3, 'band': 0, 'points': 20000, 'truth_out': 1261, ...}
+E       assert 3 == 0
+
+checks/test_props.py:35: AssertionError</failure></testcase><testcase classname="checks.test_props" name="test_p2_threshold[x+--0.02]" time="0.543"><failure message="AssertionError: {'violations': 3, 'band': 0, 'points': 20000, 'truth_out': 3, ...}&#10;assert 3 == 0">face = 'x+', d = -0.02
+
+    @pytest.mark.parametrize("d", SIGNED)
+    @pytest.mark.parametrize("face", list(H.FACES))
+    def test_p2_threshold(face, d):
+        r = Pr.p2_threshold(IMPL, N, SEED, face, d)
+&gt;       assert r["violations"] == 0, r
+E       AssertionError: {'violations': 3, 'band': 0, 'points': 20000, 'truth_out': 3, ...}
+E       assert 3 == 0
+
+checks/test_props.py:35: AssertionError</failure></testcase><testcase classname="checks.test_props" name="test_p2_threshold[x+--0.05]" time="0.543"><failure message="AssertionError: {'violations': 5, 'band': 0, 'points': 20000, 'truth_out': 8, ...}&#10;assert 5 == 0">face = 'x+', d = -0.05
+
+    @pytest.mark.parametrize("d", SIGNED)
+    @pytest.mark.parametrize("face", list(H.FACES))
+    def test_p2_threshold(face, d):
+        r = Pr.p2_threshold(IMPL, N, SEED, face, d)
+&gt;       assert r["violations"] == 0, r
+E       AssertionError: {'violations': 5, 'band': 0, 'points': 20000, 'truth_out': 8, ...}
+E       assert 5 == 0
+
+checks/test_props.py:35: AssertionError</failure></testcase><testcase classname="checks.test_props" name="test_p2_threshold[x+--0.09]" time="0.544"><failure message="AssertionError: {'violations': 7, 'band': 0, 'points': 20000, 'truth_out': 20, ...}&#10;assert 7 == 0">face = 'x+', d = -0.09
+
+    @pytest.mark.parametrize("d", SIGNED)
+    @pytest.mark.parametrize("face", list(H.FACES))
+    def test_p2_threshold(face, d):
+        r = Pr.p2_threshold(IMPL, N, SEED, face, d)
+&gt;       assert r["violations"] == 0, r
+E       AssertionError: {'violations': 7, 'band': 0, 'points': 20000, 'truth_out': 20, ...}
+E       assert 7 == 0
+
+checks/test_props.py:35: AssertionError</failure></testcase><testcase classname="checks.test_props" name="test_p2_threshold[x+--0.0999]" time="0.538"><failure message="AssertionError: {'violations': 6, 'band': 0, 'points': 20000, 'truth_out': 22, ...}&#10;assert 6 == 0">face = 'x+', d = -0.0999
+
+    @pytest.mark.parametrize("d", SIGNED)
+    @pytest.mark.parametrize("face", list(H.FACES))
+    def test_p2_threshold(face, d):
+        r = Pr.p2_threshold(IMPL, N, SEED, face, d)
+&gt;       assert r["violations"] == 0, r
+E       AssertionError: {'violations': 6, 'band': 0, 'points': 20000, 'truth_out': 22, ...}
+E       assert 6 == 0
+
+checks/test_props.py:35: AssertionError</failure></testcase><testcase classname="checks.test_props" name="test_p2_threshold[x+--0.1]" time="0.542"><failure message="AssertionError: {'violations': 6, 'band': 1261, 'points': 20000, 'truth_out': 22, ...}&#10;assert 6 == 0">face = 'x+', d = -0.1
+
+    @pytest.mark.parametrize("d", SIGNED)
+    @pytest.mark.parametrize("face", list(H.FACES))
+    def test_p2_threshold(face, d):
+        r = Pr.p2_threshold(IMPL, N, SEED, face, d)
+&gt;       assert r["violations"] == 0, r
+E       AssertionError: {'violations': 6, 'band': 1261, 'points': 20000, 'truth_out': 22, ...}
+E       assert 6 == 0
+
+checks/test_props.py:35: AssertionError</failure></testcase><testcase classname="checks.test_props" name="test_p2_threshold[x+--0.1001]" time="0.543"><failure message="AssertionError: {'violations': 1267, 'band': 0, 'points': 20000, 'truth_out': 1283, ...}&#10;assert 1267 == 0">face = 'x+', d = -0.1001
+
+    @pytest.mark.parametrize("d", SIGNED)
+    @pytest.mark.parametrize("face", list(H.FACES))
+    def test_p2_threshold(face, d):
+        r = Pr.p2_threshold(IMPL, N, SEED, face, d)
+&gt;       assert r["violations"] == 0, r
+E       AssertionError: {'violations': 1267, 'band': 0, 'points': 20000, 'truth_out': 1283, ...}
+E       assert 1267 == 0
+
+checks/test_props.py:35: AssertionError</failure></testcase><testcase classname="checks.test_props" name="test_p2_threshold[x+--0.11]" time="0.542"><failure message="AssertionError: {'violations': 1266, 'band': 0, 'points': 20000, 'truth_out': 1285, ...}&#10;assert 1266 == 0">face = 'x+', d = -0.11
+
+    @pytest.mark.parametrize("d", SIGNED)
+    @pytest.mark.parametrize("face", list(H.FACES))
+    def test_p2_threshold(face, d):
+        r = Pr.p2_threshold(IMPL, N, SEED, face, d)
+&gt;       assert r["violations"] == 0, r
+E       AssertionError: {'violations': 1266, 'band': 0, 'points': 20000, 'truth_out': 1285, ...}
+E       assert 1266 == 0
+
+checks/test_props.py:35: AssertionError</failure></testcase><testcase classname="checks.test_props" name="test_p2_threshold[x+--0.12]" time="0.542"><failure message="AssertionError: {'violations': 1264, 'band': 0, 'points': 20000, 'truth_out': 1285, ...}&#10;assert 1264 == 0">face = 'x+', d = -0.12
+
+    @pytest.mark.parametrize("d", SIGNED)
+    @pytest.mark.parametrize("face", list(H.FACES))
+    def test_p2_threshold(face, d):
+        r = Pr.p2_threshold(IMPL, N, SEED, face, d)
+&gt;       assert r["violations"] == 0, r
+E       AssertionError: {'violations': 1264, 'band': 0, 'points': 20000, 'truth_out': 1285, ...}
+E       assert 1264 == 0
+
+checks/test_props.py:35: AssertionError</failure></testcase><testcase classname="checks.test_props" name="test_p2_threshold[x+--0.15]" time="0.543"><failure message="AssertionError: {'violations': 2, 'band': 0, 'points': 20000, 'truth_out': 1287, ...}&#10;assert 2 == 0">face = 'x+', d = -0.15
+
+    @pytest.mark.parametrize("d", SIGNED)
+    @pytest.mark.parametrize("face", list(H.FACES))
+    def test_p2_threshold(face, d):
+        r = Pr.p2_threshold(IMPL, N, SEED, face, d)
+&gt;       assert r["violations"] == 0, r
+E       AssertionError: {'violations': 2, 'band': 0, 'points': 20000, 'truth_out': 1287, ...}
+E       assert 2 == 0
+
+checks/test_props.py:35: AssertionError</failure></testcase><testcase classname="checks.test_props" name="test_p2_threshold[x+--0.3]" time="0.543"><failure message="AssertionError: {'violations': 1, 'band': 0, 'points': 20000, 'truth_out': 1315, ...}&#10;assert 1 == 0">face = 'x+', d = -0.3
+
+    @pytest.mark.parametrize("d", SIGNED)
+    @pytest.mark.parametrize("face", list(H.FACES))
+    def test_p2_threshold(face, d):
+        r = Pr.p2_threshold(IMPL, N, SEED, face, d)
+&gt;       assert r["violations"] == 0, r
+E       AssertionError: {'violations': 1, 'band': 0, 'points': 20000, 'truth_out': 1315, ...}
+E       assert 1 == 0
+
+checks/test_props.py:35: AssertionError</failure></testcase><testcase classname="checks.test_props" name="test_p2_threshold[y--0.02]" time="0.536" /><testcase classname="checks.test_props" name="test_p2_threshold[y--0.05]" time="0.543" /><testcase classname="checks.test_props" name="test_p2_threshold[y--0.09]" time="0.536" /><testcase classname="checks.test_props" name="test_p2_threshold[y--0.0999]" time="0.535" /><testcase classname="checks.test_props" name="test_p2_threshold[y--0.1]" time="0.548" /><testcase classname="checks.test_props" name="test_p2_threshold[y--0.1001]" time="0.539"><failure message="AssertionError: {'violations': 2244, 'band': 0, 'points': 20000, 'truth_out': 2244, ...}&#10;assert 2244 == 0">face = 'y-', d = 0.1001
+
+    @pytest.mark.parametrize("d", SIGNED)
+    @pytest.mark.parametrize("face", list(H.FACES))
+    def test_p2_threshold(face, d):
+        r = Pr.p2_threshold(IMPL, N, SEED, face, d)
+&gt;       assert r["violations"] == 0, r
+E       AssertionError: {'violations': 2244, 'band': 0, 'points': 20000, 'truth_out': 2244, ...}
+E       assert 2244 == 0
+
+checks/test_props.py:35: AssertionError</failure></testcase><testcase classname="checks.test_props" name="test_p2_threshold[y--0.11]" time="0.540"><failure message="AssertionError: {'violations': 2244, 'band': 0, 'points': 20000, 'truth_out': 2244, ...}&#10;assert 2244 == 0">face = 'y-', d = 0.11
+
+    @pytest.mark.parametrize("d", SIGNED)
+    @pytest.mark.parametrize("face", list(H.FACES))
+    def test_p2_threshold(face, d):
+        r = Pr.p2_threshold(IMPL, N, SEED, face, d)
+&gt;       assert r["violations"] == 0, r
+E       AssertionError: {'violations': 2244, 'band': 0, 'points': 20000, 'truth_out': 2244, ...}
+E       assert 2244 == 0
+
+checks/test_props.py:35: AssertionError</failure></testcase><testcase classname="checks.test_props" name="test_p2_threshold[y--0.12]" time="0.536"><failure message="AssertionError: {'violations': 2244, 'band': 0, 'points': 20000, 'truth_out': 2244, ...}&#10;assert 2244 == 0">face = 'y-', d = 0.12
+
+    @pytest.mark.parametrize("d", SIGNED)
+    @pytest.mark.parametrize("face", list(H.FACES))
+    def test_p2_threshold(face, d):
+        r = Pr.p2_threshold(IMPL, N, SEED, face, d)
+&gt;       assert r["violations"] == 0, r
+E       AssertionError: {'violations': 2244, 'band': 0, 'points': 20000, 'truth_out': 2244, ...}
+E       assert 2244 == 0
+
+checks/test_props.py:35: AssertionError</failure></testcase><testcase classname="checks.test_props" name="test_p2_threshold[y--0.15]" time="0.539"><failure message="AssertionError: {'violations': 1, 'band': 0, 'points': 20000, 'truth_out': 2244, ...}&#10;assert 1 == 0">face = 'y-', d = 0.15
+
+    @pytest.mark.parametrize("d", SIGNED)
+    @pytest.mark.parametrize("face", list(H.FACES))
+    def test_p2_threshold(face, d):
+        r = Pr.p2_threshold(IMPL, N, SEED, face, d)
+&gt;       assert r["violations"] == 0, r
+E       AssertionError: {'violations': 1, 'band': 0, 'points': 20000, 'truth_out': 2244, ...}
+E       assert 1 == 0
+
+checks/test_props.py:35: AssertionError</failure></testcase><testcase classname="checks.test_props" name="test_p2_threshold[y--0.3]" time="0.539"><failure message="AssertionError: {'violations': 1, 'band': 0, 'points': 20000, 'truth_out': 2244, ...}&#10;assert 1 == 0">face = 'y-', d = 0.3
+
+    @pytest.mark.parametrize("d", SIGNED)
+    @pytest.mark.parametrize("face", list(H.FACES))
+    def test_p2_threshold(face, d):
+        r = Pr.p2_threshold(IMPL, N, SEED, face, d)
+&gt;       assert r["violations"] == 0, r
+E       AssertionError: {'violations': 1, 'band': 0, 'points': 20000, 'truth_out': 2244, ...}
+E       assert 1 == 0
+
+checks/test_props.py:35: AssertionError</failure></testcase><testcase classname="checks.test_props" name="test_p2_threshold[y---0.02]" time="0.541"><failure message="AssertionError: {'violations': 7, 'band': 0, 'points': 20000, 'truth_out': 7, ...}&#10;assert 7 == 0">face = 'y-', d = -0.02
+
+    @pytest.mark.parametrize("d", SIGNED)
+    @pytest.mark.parametrize("face", list(H.FACES))
+    def test_p2_threshold(face, d):
+        r = Pr.p2_threshold(IMPL, N, SEED, face, d)
+&gt;       assert r["violations"] == 0, r
+E       AssertionError: {'violations': 7, 'band': 0, 'points': 20000, 'truth_out': 7, ...}
+E       assert 7 == 0
+
+checks/test_props.py:35: AssertionError</failure></testcase><testcase classname="checks.test_props" name="test_p2_threshold[y---0.05]" time="0.544"><failure message="AssertionError: {'violations': 7, 'band': 0, 'points': 20000, 'truth_out': 16, ...}&#10;assert 7 == 0">face = 'y-', d = -0.05
+
+    @pytest.mark.parametrize("d", SIGNED)
+    @pytest.mark.parametrize("face", list(H.FACES))
+    def test_p2_threshold(face, d):
+        r = Pr.p2_threshold(IMPL, N, SEED, face, d)
+&gt;       assert r["violations"] == 0, r
+E       AssertionError: {'violations': 7, 'band': 0, 'points': 20000, 'truth_out': 16, ...}
+E       assert 7 == 0
+
+checks/test_props.py:35: AssertionError</failure></testcase><testcase classname="checks.test_props" name="test_p2_threshold[y---0.09]" time="0.539"><failure message="AssertionError: {'violations': 7, 'band': 0, 'points': 20000, 'truth_out': 28, ...}&#10;assert 7 == 0">face = 'y-', d = -0.09
+
+    @pytest.mark.parametrize("d", SIGNED)
+    @pytest.mark.parametrize("face", list(H.FACES))
+    def test_p2_threshold(face, d):
+        r = Pr.p2_threshold(IMPL, N, SEED, face, d)
+&gt;       assert r["violations"] == 0, r
+E       AssertionError: {'violations': 7, 'band': 0, 'points': 20000, 'truth_out': 28, ...}
+E       assert 7 == 0
+
+checks/test_props.py:35: AssertionError</failure></testcase><testcase classname="checks.test_props" name="test_p2_threshold[y---0.0999]" time="0.545"><failure message="AssertionError: {'violations': 5, 'band': 0, 'points': 20000, 'truth_out': 29, ...}&#10;assert 5 == 0">face = 'y-', d = -0.0999
+
+    @pytest.mark.parametrize("d", SIGNED)
+    @pytest.mark.parametrize("face", list(H.FACES))
+    def test_p2_threshold(face, d):
+        r = Pr.p2_threshold(IMPL, N, SEED, face, d)
+&gt;       assert r["violations"] == 0, r
+E       AssertionError: {'violations': 5, 'band': 0, 'points': 20000, 'truth_out': 29, ...}
+E       assert 5 == 0
+
+checks/test_props.py:35: AssertionError</failure></testcase><testcase classname="checks.test_props" name="test_p2_threshold[y---0.1]" time="0.545"><failure message="AssertionError: {'violations': 5, 'band': 2244, 'points': 20000, 'truth_out': 29, ...}&#10;assert 5 == 0">face = 'y-', d = -0.1
+
+    @pytest.mark.parametrize("d", SIGNED)
+    @pytest.mark.parametrize("face", list(H.FACES))
+    def test_p2_threshold(face, d):
+        r = Pr.p2_threshold(IMPL, N, SEED, face, d)
+&gt;       assert r["violations"] == 0, r
+E       AssertionError: {'violations': 5, 'band': 2244, 'points': 20000, 'truth_out': 29, ...}
+E       assert 5 == 0
+
+checks/test_props.py:35: AssertionError</failure></testcase><testcase classname="checks.test_props" name="test_p2_threshold[y---0.1001]" time="0.544"><failure message="AssertionError: {'violations': 2249, 'band': 0, 'points': 20000, 'truth_out': 2273, ...}&#10;assert 2249 == 0">face = 'y-', d = -0.1001
+
+    @pytest.mark.parametrize("d", SIGNED)
+    @pytest.mark.parametrize("face", list(H.FACES))
+    def test_p2_threshold(face, d):
+        r = Pr.p2_threshold(IMPL, N, SEED, face, d)
+&gt;       assert r["violations"] == 0, r
+E       AssertionError: {'violations': 2249, 'band': 0, 'points': 20000, 'truth_out': 2273, ...}
+E       assert 2249 == 0
+
+checks/test_props.py:35: AssertionError</failure></testcase><testcase classname="checks.test_props" name="test_p2_threshold[y---0.11]" time="0.539"><failure message="AssertionError: {'violations': 2247, 'band': 0, 'points': 20000, 'truth_out': 2274, ...}&#10;assert 2247 == 0">face = 'y-', d = -0.11
+
+    @pytest.mark.parametrize("d", SIGNED)
+    @pytest.mark.parametrize("face", list(H.FACES))
+    def test_p2_threshold(face, d):
+        r = Pr.p2_threshold(IMPL, N, SEED, face, d)
+&gt;       assert r["violations"] == 0, r
+E       AssertionError: {'violations': 2247, 'band': 0, 'points': 20000, 'truth_out': 2274, ...}
+E       assert 2247 == 0
+
+checks/test_props.py:35: AssertionError</failure></testcase><testcase classname="checks.test_props" name="test_p2_threshold[y---0.12]" time="0.539"><failure message="AssertionError: {'violations': 2252, 'band': 0, 'points': 20000, 'truth_out': 2281, ...}&#10;assert 2252 == 0">face = 'y-', d = -0.12
+
+    @pytest.mark.parametrize("d", SIGNED)
+    @pytest.mark.parametrize("face", list(H.FACES))
+    def test_p2_threshold(face, d):
+        r = Pr.p2_threshold(IMPL, N, SEED, face, d)
+&gt;       assert r["violations"] == 0, r
+E       AssertionError: {'violations': 2252, 'band': 0, 'points': 20000, 'truth_out': 2281, ...}
+E       assert 2252 == 0
+
+checks/test_props.py:35: AssertionError</failure></testcase><testcase classname="checks.test_props" name="test_p2_threshold[y---0.15]" time="0.545"><failure message="AssertionError: {'violations': 6, 'band': 0, 'points': 20000, 'truth_out': 2288, ...}&#10;assert 6 == 0">face = 'y-', d = -0.15
+
+    @pytest.mark.parametrize("d", SIGNED)
+    @pytest.mark.parametrize("face", list(H.FACES))
+    def test_p2_threshold(face, d):
+        r = Pr.p2_threshold(IMPL, N, SEED, face, d)
+&gt;       assert r["violations"] == 0, r
+E       AssertionError: {'violations': 6, 'band': 0, 'points': 20000, 'truth_out': 2288, ...}
+E       assert 6 == 0
+
+checks/test_props.py:35: AssertionError</failure></testcase><testcase classname="checks.test_props" name="test_p2_threshold[y---0.3]" time="0.542"><failure message="AssertionError: {'violations': 11, 'band': 0, 'points': 20000, 'truth_out': 2334, ...}&#10;assert 11 == 0">face = 'y-', d = -0.3
+
+    @pytest.mark.parametrize("d", SIGNED)
+    @pytest.mark.parametrize("face", list(H.FACES))
+    def test_p2_threshold(face, d):
+        r = Pr.p2_threshold(IMPL, N, SEED, face, d)
+&gt;       assert r["violations"] == 0, r
+E       AssertionError: {'violations': 11, 'band': 0, 'points': 20000, 'truth_out': 2334, ...}
+E       assert 11 == 0
+
+checks/test_props.py:35: AssertionError</failure></testcase><testcase classname="checks.test_props" name="test_p2_threshold[y+-0.02]" time="0.540" /><testcase classname="checks.test_props" name="test_p2_threshold[y+-0.05]" time="0.537" /><testcase classname="checks.test_props" name="test_p2_threshold[y+-0.09]" time="0.544" /><testcase classname="checks.test_props" name="test_p2_threshold[y+-0.0999]" time="0.534" /><testcase classname="checks.test_props" name="test_p2_threshold[y+-0.1]" time="0.533" /><testcase classname="checks.test_props" name="test_p2_threshold[y+-0.1001]" time="0.541"><failure message="AssertionError: {'violations': 2265, 'band': 0, 'points': 20000, 'truth_out': 2265, ...}&#10;assert 2265 == 0">face = 'y+', d = 0.1001
+
+    @pytest.mark.parametrize("d", SIGNED)
+    @pytest.mark.parametrize("face", list(H.FACES))
+    def test_p2_threshold(face, d):
+        r = Pr.p2_threshold(IMPL, N, SEED, face, d)
+&gt;       assert r["violations"] == 0, r
+E       AssertionError: {'violations': 2265, 'band': 0, 'points': 20000, 'truth_out': 2265, ...}
+E       assert 2265 == 0
+
+checks/test_props.py:35: AssertionError</failure></testcase><testcase classname="checks.test_props" name="test_p2_threshold[y+-0.11]" time="0.536"><failure message="AssertionError: {'violations': 2265, 'band': 0, 'points': 20000, 'truth_out': 2265, ...}&#10;assert 2265 == 0">face = 'y+', d = 0.11
+
+    @pytest.mark.parametrize("d", SIGNED)
+    @pytest.mark.parametrize("face", list(H.FACES))
+    def test_p2_threshold(face, d):
+        r = Pr.p2_threshold(IMPL, N, SEED, face, d)
+&gt;       assert r["violations"] == 0, r
+E       AssertionError: {'violations': 2265, 'band': 0, 'points': 20000, 'truth_out': 2265, ...}
+E       assert 2265 == 0
+
+checks/test_props.py:35: AssertionError</failure></testcase><testcase classname="checks.test_props" name="test_p2_threshold[y+-0.12]" time="0.535"><failure message="AssertionError: {'violations': 2265, 'band': 0, 'points': 20000, 'truth_out': 2265, ...}&#10;assert 2265 == 0">face = 'y+', d = 0.12
+
+    @pytest.mark.parametrize("d", SIGNED)
+    @pytest.mark.parametrize("face", list(H.FACES))
+    def test_p2_threshold(face, d):
+        r = Pr.p2_threshold(IMPL, N, SEED, face, d)
+&gt;       assert r["violations"] == 0, r
+E       AssertionError: {'violations': 2265, 'band': 0, 'points': 20000, 'truth_out': 2265, ...}
+E       assert 2265 == 0
+
+checks/test_props.py:35: AssertionError</failure></testcase><testcase classname="checks.test_props" name="test_p2_threshold[y+-0.15]" time="0.540"><failure message="AssertionError: {'violations': 1, 'band': 0, 'points': 20000, 'truth_out': 2265, ...}&#10;assert 1 == 0">face = 'y+', d = 0.15
+
+    @pytest.mark.parametrize("d", SIGNED)
+    @pytest.mark.parametrize("face", list(H.FACES))
+    def test_p2_threshold(face, d):
+        r = Pr.p2_threshold(IMPL, N, SEED, face, d)
+&gt;       assert r["violations"] == 0, r
+E       AssertionError: {'violations': 1, 'band': 0, 'points': 20000, 'truth_out': 2265, ...}
+E       assert 1 == 0
+
+checks/test_props.py:35: AssertionError</failure></testcase><testcase classname="checks.test_props" name="test_p2_threshold[y+-0.3]" time="0.539"><failure message="AssertionError: {'violations': 1, 'band': 0, 'points': 20000, 'truth_out': 2265, ...}&#10;assert 1 == 0">face = 'y+', d = 0.3
+
+    @pytest.mark.parametrize("d", SIGNED)
+    @pytest.mark.parametrize("face", list(H.FACES))
+    def test_p2_threshold(face, d):
+        r = Pr.p2_threshold(IMPL, N, SEED, face, d)
+&gt;       assert r["violations"] == 0, r
+E       AssertionError: {'violations': 1, 'band': 0, 'points': 20000, 'truth_out': 2265, ...}
+E       assert 1 == 0
+
+checks/test_props.py:35: AssertionError</failure></testcase><testcase classname="checks.test_props" name="test_p2_threshold[y+--0.02]" time="0.539"><failure message="AssertionError: {'violations': 3, 'band': 0, 'points': 20000, 'truth_out': 3, ...}&#10;assert 3 == 0">face = 'y+', d = -0.02
+
+    @pytest.mark.parametrize("d", SIGNED)
+    @pytest.mark.parametrize("face", list(H.FACES))
+    def test_p2_threshold(face, d):
+        r = Pr.p2_threshold(IMPL, N, SEED, face, d)
+&gt;       assert r["violations"] == 0, r
+E       AssertionError: {'violations': 3, 'band': 0, 'points': 20000, 'truth_out': 3, ...}
+E       assert 3 == 0
+
+checks/test_props.py:35: AssertionError</failure></testcase><testcase classname="checks.test_props" name="test_p2_threshold[y+--0.05]" time="0.538"><failure message="AssertionError: {'violations': 5, 'band': 0, 'points': 20000, 'truth_out': 9, ...}&#10;assert 5 == 0">face = 'y+', d = -0.05
+
+    @pytest.mark.parametrize("d", SIGNED)
+    @pytest.mark.parametrize("face", list(H.FACES))
+    def test_p2_threshold(face, d):
+        r = Pr.p2_threshold(IMPL, N, SEED, face, d)
+&gt;       assert r["violations"] == 0, r
+E       AssertionError: {'violations': 5, 'band': 0, 'points': 20000, 'truth_out': 9, ...}
+E       assert 5 == 0
+
+checks/test_props.py:35: AssertionError</failure></testcase><testcase classname="checks.test_props" name="test_p2_threshold[y+--0.09]" time="0.539"><failure message="AssertionError: {'violations': 6, 'band': 0, 'points': 20000, 'truth_out': 16, ...}&#10;assert 6 == 0">face = 'y+', d = -0.09
+
+    @pytest.mark.parametrize("d", SIGNED)
+    @pytest.mark.parametrize("face", list(H.FACES))
+    def test_p2_threshold(face, d):
+        r = Pr.p2_threshold(IMPL, N, SEED, face, d)
+&gt;       assert r["violations"] == 0, r
+E       AssertionError: {'violations': 6, 'band': 0, 'points': 20000, 'truth_out': 16, ...}
+E       assert 6 == 0
+
+checks/test_props.py:35: AssertionError</failure></testcase><testcase classname="checks.test_props" name="test_p2_threshold[y+--0.0999]" time="0.537"><failure message="AssertionError: {'violations': 2, 'band': 0, 'points': 20000, 'truth_out': 16, ...}&#10;assert 2 == 0">face = 'y+', d = -0.0999
+
+    @pytest.mark.parametrize("d", SIGNED)
+    @pytest.mark.parametrize("face", list(H.FACES))
+    def test_p2_threshold(face, d):
+        r = Pr.p2_threshold(IMPL, N, SEED, face, d)
+&gt;       assert r["violations"] == 0, r
+E       AssertionError: {'violations': 2, 'band': 0, 'points': 20000, 'truth_out': 16, ...}
+E       assert 2 == 0
+
+checks/test_props.py:35: AssertionError</failure></testcase><testcase classname="checks.test_props" name="test_p2_threshold[y+--0.1]" time="0.540"><failure message="AssertionError: {'violations': 2, 'band': 2265, 'points': 20000, 'truth_out': 16, ...}&#10;assert 2 == 0">face = 'y+', d = -0.1
+
+    @pytest.mark.parametrize("d", SIGNED)
+    @pytest.mark.parametrize("face", list(H.FACES))
+    def test_p2_threshold(face, d):
+        r = Pr.p2_threshold(IMPL, N, SEED, face, d)
+&gt;       assert r["violations"] == 0, r
+E       AssertionError: {'violations': 2, 'band': 2265, 'points': 20000, 'truth_out': 16, ...}
+E       assert 2 == 0
+
+checks/test_props.py:35: AssertionError</failure></testcase><testcase classname="checks.test_props" name="test_p2_threshold[y+--0.1001]" time="0.541"><failure message="AssertionError: {'violations': 2267, 'band': 0, 'points': 20000, 'truth_out': 2281, ...}&#10;assert 2267 == 0">face = 'y+', d = -0.1001
+
+    @pytest.mark.parametrize("d", SIGNED)
+    @pytest.mark.parametrize("face", list(H.FACES))
+    def test_p2_threshold(face, d):
+        r = Pr.p2_threshold(IMPL, N, SEED, face, d)
+&gt;       assert r["violations"] == 0, r
+E       AssertionError: {'violations': 2267, 'band': 0, 'points': 20000, 'truth_out': 2281, ...}
+E       assert 2267 == 0
+
+checks/test_props.py:35: AssertionError</failure></testcase><testcase classname="checks.test_props" name="test_p2_threshold[y+--0.11]" time="0.541"><failure message="AssertionError: {'violations': 2270, 'band': 0, 'points': 20000, 'truth_out': 2285, ...}&#10;assert 2270 == 0">face = 'y+', d = -0.11
+
+    @pytest.mark.parametrize("d", SIGNED)
+    @pytest.mark.parametrize("face", list(H.FACES))
+    def test_p2_threshold(face, d):
+        r = Pr.p2_threshold(IMPL, N, SEED, face, d)
+&gt;       assert r["violations"] == 0, r
+E       AssertionError: {'violations': 2270, 'band': 0, 'points': 20000, 'truth_out': 2285, ...}
+E       assert 2270 == 0
+
+checks/test_props.py:35: AssertionError</failure></testcase><testcase classname="checks.test_props" name="test_p2_threshold[y+--0.12]" time="0.547"><failure message="AssertionError: {'violations': 2271, 'band': 0, 'points': 20000, 'truth_out': 2287, ...}&#10;assert 2271 == 0">face = 'y+', d = -0.12
+
+    @pytest.mark.parametrize("d", SIGNED)
+    @pytest.mark.parametrize("face", list(H.FACES))
+    def test_p2_threshold(face, d):
+        r = Pr.p2_threshold(IMPL, N, SEED, face, d)
+&gt;       assert r["violations"] == 0, r
+E       AssertionError: {'violations': 2271, 'band': 0, 'points': 20000, 'truth_out': 2287, ...}
+E       assert 2271 == 0
+
+checks/test_props.py:35: AssertionError</failure></testcase><testcase classname="checks.test_props" name="test_p2_threshold[y+--0.15]" time="0.541"><failure message="AssertionError: {'violations': 9, 'band': 0, 'points': 20000, 'truth_out': 2300, ...}&#10;assert 9 == 0">face = 'y+', d = -0.15
+
+    @pytest.mark.parametrize("d", SIGNED)
+    @pytest.mark.parametrize("face", list(H.FACES))
+    def test_p2_threshold(face, d):
+        r = Pr.p2_threshold(IMPL, N, SEED, face, d)
+&gt;       assert r["violations"] == 0, r
+E       AssertionError: {'violations': 9, 'band': 0, 'points': 20000, 'truth_out': 2300, ...}
+E       assert 9 == 0
+
+checks/test_props.py:35: AssertionError</failure></testcase><testcase classname="checks.test_props" name="test_p2_threshold[y+--0.3]" time="0.541"><failure message="AssertionError: {'violations': 5, 'band': 0, 'points': 20000, 'truth_out': 2323, ...}&#10;assert 5 == 0">face = 'y+', d = -0.3
+
+    @pytest.mark.parametrize("d", SIGNED)
+    @pytest.mark.parametrize("face", list(H.FACES))
+    def test_p2_threshold(face, d):
+        r = Pr.p2_threshold(IMPL, N, SEED, face, d)
+&gt;       assert r["violations"] == 0, r
+E       AssertionError: {'violations': 5, 'band': 0, 'points': 20000, 'truth_out': 2323, ...}
+E       assert 5 == 0
+
+checks/test_props.py:35: AssertionError</failure></testcase><testcase classname="checks.test_props" name="test_p2_threshold[z--0.02]" time="0.539" /><testcase classname="checks.test_props" name="test_p2_threshold[z--0.05]" time="0.537" /><testcase classname="checks.test_props" name="test_p2_threshold[z--0.09]" time="0.547" /><testcase classname="checks.test_props" name="test_p2_threshold[z--0.0999]" time="0.543" /><testcase classname="checks.test_props" name="test_p2_threshold[z--0.1]" time="0.548" /><testcase classname="checks.test_props" name="test_p2_threshold[z--0.1001]" time="0.543"><failure message="AssertionError: {'violations': 8, 'band': 0, 'points': 20000, 'truth_out': 6356, ...}&#10;assert 8 == 0">face = 'z-', d = 0.1001
+
+    @pytest.mark.parametrize("d", SIGNED)
+    @pytest.mark.parametrize("face", list(H.FACES))
+    def test_p2_threshold(face, d):
+        r = Pr.p2_threshold(IMPL, N, SEED, face, d)
+&gt;       assert r["violations"] == 0, r
+E       AssertionError: {'violations': 8, 'band': 0, 'points': 20000, 'truth_out': 6356, ...}
+E       assert 8 == 0
+
+checks/test_props.py:35: AssertionError</failure></testcase><testcase classname="checks.test_props" name="test_p2_threshold[z--0.11]" time="0.549"><failure message="AssertionError: {'violations': 8, 'band': 0, 'points': 20000, 'truth_out': 6356, ...}&#10;assert 8 == 0">face = 'z-', d = 0.11
+
+    @pytest.mark.parametrize("d", SIGNED)
+    @pytest.mark.parametrize("face", list(H.FACES))
+    def test_p2_threshold(face, d):
+        r = Pr.p2_threshold(IMPL, N, SEED, face, d)
+&gt;       assert r["violations"] == 0, r
+E       AssertionError: {'violations': 8, 'band': 0, 'points': 20000, 'truth_out': 6356, ...}
+E       assert 8 == 0
+
+checks/test_props.py:35: AssertionError</failure></testcase><testcase classname="checks.test_props" name="test_p2_threshold[z--0.12]" time="0.548"><failure message="AssertionError: {'violations': 8, 'band': 0, 'points': 20000, 'truth_out': 6356, ...}&#10;assert 8 == 0">face = 'z-', d = 0.12
+
+    @pytest.mark.parametrize("d", SIGNED)
+    @pytest.mark.parametrize("face", list(H.FACES))
+    def test_p2_threshold(face, d):
+        r = Pr.p2_threshold(IMPL, N, SEED, face, d)
+&gt;       assert r["violations"] == 0, r
+E       AssertionError: {'violations': 8, 'band': 0, 'points': 20000, 'truth_out': 6356, ...}
+E       assert 8 == 0
+
+checks/test_props.py:35: AssertionError</failure></testcase><testcase classname="checks.test_props" name="test_p2_threshold[z--0.15]" time="0.548"><failure message="AssertionError: {'violations': 8, 'band': 0, 'points': 20000, 'truth_out': 6356, ...}&#10;assert 8 == 0">face = 'z-', d = 0.15
+
+    @pytest.mark.parametrize("d", SIGNED)
+    @pytest.mark.parametrize("face", list(H.FACES))
+    def test_p2_threshold(face, d):
+        r = Pr.p2_threshold(IMPL, N, SEED, face, d)
+&gt;       assert r["violations"] == 0, r
+E       AssertionError: {'violations': 8, 'band': 0, 'points': 20000, 'truth_out': 6356, ...}
+E       assert 8 == 0
+
+checks/test_props.py:35: AssertionError</failure></testcase><testcase classname="checks.test_props" name="test_p2_threshold[z--0.3]" time="0.554"><failure message="AssertionError: {'violations': 8, 'band': 0, 'points': 20000, 'truth_out': 6356, ...}&#10;assert 8 == 0">face = 'z-', d = 0.3
+
+    @pytest.mark.parametrize("d", SIGNED)
+    @pytest.mark.parametrize("face", list(H.FACES))
+    def test_p2_threshold(face, d):
+        r = Pr.p2_threshold(IMPL, N, SEED, face, d)
+&gt;       assert r["violations"] == 0, r
+E       AssertionError: {'violations': 8, 'band': 0, 'points': 20000, 'truth_out': 6356, ...}
+E       assert 8 == 0
+
+checks/test_props.py:35: AssertionError</failure></testcase><testcase classname="checks.test_props" name="test_p2_threshold[z---0.02]" time="0.539" /><testcase classname="checks.test_props" name="test_p2_threshold[z---0.05]" time="0.544" /><testcase classname="checks.test_props" name="test_p2_threshold[z---0.09]" time="0.547" /><testcase classname="checks.test_props" name="test_p2_threshold[z---0.0999]" time="0.548" /><testcase classname="checks.test_props" name="test_p2_threshold[z---0.1]" time="0.546" /><testcase classname="checks.test_props" name="test_p2_threshold[z---0.1001]" time="0.544" /><testcase classname="checks.test_props" name="test_p2_threshold[z---0.11]" time="0.542" /><testcase classname="checks.test_props" name="test_p2_threshold[z---0.12]" time="0.548" /><testcase classname="checks.test_props" name="test_p2_threshold[z---0.15]" time="0.543" /><testcase classname="checks.test_props" name="test_p2_threshold[z---0.3]" time="0.548" /><testcase classname="checks.test_props" name="test_p2_threshold[z+-0.02]" time="0.538" /><testcase classname="checks.test_props" name="test_p2_threshold[z+-0.05]" time="0.538" /><testcase classname="checks.test_props" name="test_p2_threshold[z+-0.09]" time="0.543" /><testcase classname="checks.test_props" name="test_p2_threshold[z+-0.0999]" time="0.544" /><testcase classname="checks.test_props" name="test_p2_threshold[z+-0.1]" time="0.543" /><testcase classname="checks.test_props" name="test_p2_threshold[z+-0.1001]" time="0.544"><failure message="AssertionError: {'violations': 13, 'band': 0, 'points': 20000, 'truth_out': 6582, ...}&#10;assert 13 == 0">face = 'z+', d = 0.1001
+
+    @pytest.mark.parametrize("d", SIGNED)
+    @pytest.mark.parametrize("face", list(H.FACES))
+    def test_p2_threshold(face, d):
+        r = Pr.p2_threshold(IMPL, N, SEED, face, d)
+&gt;       assert r["violations"] == 0, r
+E       AssertionError: {'violations': 13, 'band': 0, 'points': 20000, 'truth_out': 6582, ...}
+E       assert 13 == 0
+
+checks/test_props.py:35: AssertionError</failure></testcase><testcase classname="checks.test_props" name="test_p2_threshold[z+-0.11]" time="0.550"><failure message="AssertionError: {'violations': 13, 'band': 0, 'points': 20000, 'truth_out': 6582, ...}&#10;assert 13 == 0">face = 'z+', d = 0.11
+
+    @pytest.mark.parametrize("d", SIGNED)
+    @pytest.mark.parametrize("face", list(H.FACES))
+    def test_p2_threshold(face, d):
+        r = Pr.p2_threshold(IMPL, N, SEED, face, d)
+&gt;       assert r["violations"] == 0, r
+E       AssertionError: {'violations': 13, 'band': 0, 'points': 20000, 'truth_out': 6582, ...}
+E       assert 13 == 0
+
+checks/test_props.py:35: AssertionError</failure></testcase><testcase classname="checks.test_props" name="test_p2_threshold[z+-0.12]" time="0.549"><failure message="AssertionError: {'violations': 13, 'band': 0, 'points': 20000, 'truth_out': 6582, ...}&#10;assert 13 == 0">face = 'z+', d = 0.12
+
+    @pytest.mark.parametrize("d", SIGNED)
+    @pytest.mark.parametrize("face", list(H.FACES))
+    def test_p2_threshold(face, d):
+        r = Pr.p2_threshold(IMPL, N, SEED, face, d)
+&gt;       assert r["violations"] == 0, r
+E       AssertionError: {'violations': 13, 'band': 0, 'points': 20000, 'truth_out': 6582, ...}
+E       assert 13 == 0
+
+checks/test_props.py:35: AssertionError</failure></testcase><testcase classname="checks.test_props" name="test_p2_threshold[z+-0.15]" time="0.549"><failure message="AssertionError: {'violations': 13, 'band': 0, 'points': 20000, 'truth_out': 6582, ...}&#10;assert 13 == 0">face = 'z+', d = 0.15
+
+    @pytest.mark.parametrize("d", SIGNED)
+    @pytest.mark.parametrize("face", list(H.FACES))
+    def test_p2_threshold(face, d):
+        r = Pr.p2_threshold(IMPL, N, SEED, face, d)
+&gt;       assert r["violations"] == 0, r
+E       AssertionError: {'violations': 13, 'band': 0, 'points': 20000, 'truth_out': 6582, ...}
+E       assert 13 == 0
+
+checks/test_props.py:35: AssertionError</failure></testcase><testcase classname="checks.test_props" name="test_p2_threshold[z+-0.3]" time="0.550"><failure message="AssertionError: {'violations': 13, 'band': 0, 'points': 20000, 'truth_out': 6582, ...}&#10;assert 13 == 0">face = 'z+', d = 0.3
+
+    @pytest.mark.parametrize("d", SIGNED)
+    @pytest.mark.parametrize("face", list(H.FACES))
+    def test_p2_threshold(face, d):
+        r = Pr.p2_threshold(IMPL, N, SEED, face, d)
+&gt;       assert r["violations"] == 0, r
+E       AssertionError: {'violations': 13, 'band': 0, 'points': 20000, 'truth_out': 6582, ...}
+E       assert 13 == 0
+
+checks/test_props.py:35: AssertionError</failure></testcase><testcase classname="checks.test_props" name="test_p2_threshold[z+--0.02]" time="0.541" /><testcase classname="checks.test_props" name="test_p2_threshold[z+--0.05]" time="0.543" /><testcase classname="checks.test_props" name="test_p2_threshold[z+--0.09]" time="0.548" /><testcase classname="checks.test_props" name="test_p2_threshold[z+--0.0999]" time="0.542" /><testcase classname="checks.test_props" name="test_p2_threshold[z+--0.1]" time="0.543" /><testcase classname="checks.test_props" name="test_p2_threshold[z+--0.1001]" time="0.543" /><testcase classname="checks.test_props" name="test_p2_threshold[z+--0.11]" time="0.549" /><testcase classname="checks.test_props" name="test_p2_threshold[z+--0.12]" time="0.544" /><testcase classname="checks.test_props" name="test_p2_threshold[z+--0.15]" time="0.543" /><testcase classname="checks.test_props" name="test_p2_threshold[z+--0.3]" time="0.546" /><testcase classname="checks.test_props" name="test_p3_monotone[x--1]" time="1.565" /><testcase classname="checks.test_props" name="test_p3_monotone[x---1]" time="1.502" /><testcase classname="checks.test_props" name="test_p3_monotone[x+-1]" time="1.438" /><testcase classname="checks.test_props" name="test_p3_monotone[x+--1]" time="1.465" /><testcase classname="checks.test_props" name="test_p3_monotone[y--1]" time="1.446" /><testcase classname="checks.test_props" name="test_p3_monotone[y---1]" time="1.439" /><testcase classname="checks.test_props" name="test_p3_monotone[y+-1]" time="1.431" /><testcase classname="checks.test_props" name="test_p3_monotone[y+--1]" time="1.440" /><testcase classname="checks.test_props" name="test_p3_monotone[z--1]" time="1.463" /><testcase classname="checks.test_props" name="test_p3_monotone[z---1]" time="1.460" /><testcase classname="checks.test_props" name="test_p3_monotone[z+-1]" time="1.448" /><testcase classname="checks.test_props" name="test_p3_monotone[z+--1]" time="1.453" /><testcase classname="checks.test_props" name="test_p4_partition[x--0.02]" time="0.101" /><testcase classname="checks.test_props" name="test_p4_partition[x--0.05]" time="0.101" /><testcase classname="checks.test_props" name="test_p4_partition[x--0.09]" time="0.101" /><testcase classname="checks.test_props" name="test_p4_partition[x--0.0999]" time="0.101" /><testcase classname="checks.test_props" name="test_p4_partition[x--0.1]" time="0.101" /><testcase classname="checks.test_props" name="test_p4_partition[x--0.1001]" time="0.101" /><testcase classname="checks.test_props" name="test_p4_partition[x--0.11]" time="0.101" /><testcase classname="checks.test_props" name="test_p4_partition[x--0.12]" time="0.101" /><testcase classname="checks.test_props" name="test_p4_partition[x--0.15]" time="0.101"><failure message="AssertionError: {'violations': 1293, 'no_class': 1292, 'pct_sum': 93.54, 'within_pct': 93.54}&#10;assert 1293 == 0">face = 'x-', d = 0.15
+
+    @pytest.mark.parametrize("d", SIGNED)
+    @pytest.mark.parametrize("face", list(H.FACES))
+    def test_p4_partition(face, d):
+        r = Pr.p4_partition(IMPL, N, SEED, face, d)
+&gt;       assert r["violations"] == 0, r
+E       AssertionError: {'violations': 1293, 'no_class': 1292, 'pct_sum': 93.54, 'within_pct': 93.54}
+E       assert 1293 == 0
+
+checks/test_props.py:49: AssertionError</failure></testcase><testcase classname="checks.test_props" name="test_p4_partition[x--0.3]" time="0.101" /><testcase classname="checks.test_props" name="test_p4_partition[x---0.02]" time="0.101" /><testcase classname="checks.test_props" name="test_p4_partition[x---0.05]" time="0.101" /><testcase classname="checks.test_props" name="test_p4_partition[x---0.09]" time="0.101" /><testcase classname="checks.test_props" name="test_p4_partition[x---0.0999]" time="0.101" /><testcase classname="checks.test_props" name="test_p4_partition[x---0.1]" time="0.101" /><testcase classname="checks.test_props" name="test_p4_partition[x---0.1001]" time="0.101" /><testcase classname="checks.test_props" name="test_p4_partition[x---0.11]" time="0.101" /><testcase classname="checks.test_props" name="test_p4_partition[x---0.12]" time="0.101" /><testcase classname="checks.test_props" name="test_p4_partition[x---0.15]" time="0.101"><failure message="AssertionError: {'violations': 1293, 'no_class': 1292, 'pct_sum': 93.55, 'within_pct': 93.39}&#10;assert 1293 == 0">face = 'x-', d = -0.15
+
+    @pytest.mark.parametrize("d", SIGNED)
+    @pytest.mark.parametrize("face", list(H.FACES))
+    def test_p4_partition(face, d):
+        r = Pr.p4_partition(IMPL, N, SEED, face, d)
+&gt;       assert r["violations"] == 0, r
+E       AssertionError: {'violations': 1293, 'no_class': 1292, 'pct_sum': 93.55, 'within_pct': 93.39}
+E       assert 1293 == 0
+
+checks/test_props.py:49: AssertionError</failure></testcase><testcase classname="checks.test_props" name="test_p4_partition[x---0.3]" time="0.101" /><testcase classname="checks.test_props" name="test_p4_partition[x+-0.02]" time="0.101" /><testcase classname="checks.test_props" name="test_p4_partition[x+-0.05]" time="0.101" /><testcase classname="checks.test_props" name="test_p4_partition[x+-0.09]" time="0.100" /><testcase classname="checks.test_props" name="test_p4_partition[x+-0.0999]" time="0.101" /><testcase classname="checks.test_props" name="test_p4_partition[x+-0.1]" time="0.101" /><testcase classname="checks.test_props" name="test_p4_partition[x+-0.1001]" time="0.101" /><testcase classname="checks.test_props" name="test_p4_partition[x+-0.11]" time="0.101" /><testcase classname="checks.test_props" name="test_p4_partition[x+-0.12]" time="0.101" /><testcase classname="checks.test_props" name="test_p4_partition[x+-0.15]" time="0.101"><failure message="AssertionError: {'violations': 1259, 'no_class': 1258, 'pct_sum': 93.71, 'within_pct': 93.71}&#10;assert 1259 == 0">face = 'x+', d = 0.15
+
+    @pytest.mark.parametrize("d", SIGNED)
+    @pytest.mark.parametrize("face", list(H.FACES))
+    def test_p4_partition(face, d):
+        r = Pr.p4_partition(IMPL, N, SEED, face, d)
+&gt;       assert r["violations"] == 0, r
+E       AssertionError: {'violations': 1259, 'no_class': 1258, 'pct_sum': 93.71, 'within_pct': 93.71}
+E       assert 1259 == 0
+
+checks/test_props.py:49: AssertionError</failure></testcase><testcase classname="checks.test_props" name="test_p4_partition[x+-0.3]" time="0.101" /><testcase classname="checks.test_props" name="test_p4_partition[x+--0.02]" time="0.101" /><testcase classname="checks.test_props" name="test_p4_partition[x+--0.05]" time="0.102" /><testcase classname="checks.test_props" name="test_p4_partition[x+--0.09]" time="0.101" /><testcase classname="checks.test_props" name="test_p4_partition[x+--0.0999]" time="0.101" /><testcase classname="checks.test_props" name="test_p4_partition[x+--0.1]" time="0.101" /><testcase classname="checks.test_props" name="test_p4_partition[x+--0.1001]" time="0.101" /><testcase classname="checks.test_props" name="test_p4_partition[x+--0.11]" time="0.101" /><testcase classname="checks.test_props" name="test_p4_partition[x+--0.12]" time="0.101" /><testcase classname="checks.test_props" name="test_p4_partition[x+--0.15]" time="0.101"><failure message="AssertionError: {'violations': 1262, 'no_class': 1261, 'pct_sum': 93.7, 'within_pct': 93.58}&#10;assert 1262 == 0">face = 'x+', d = -0.15
+
+    @pytest.mark.parametrize("d", SIGNED)
+    @pytest.mark.parametrize("face", list(H.FACES))
+    def test_p4_partition(face, d):
+        r = Pr.p4_partition(IMPL, N, SEED, face, d)
+&gt;       assert r["violations"] == 0, r
+E       AssertionError: {'violations': 1262, 'no_class': 1261, 'pct_sum': 93.7, 'within_pct': 93.58}
+E       assert 1262 == 0
+
+checks/test_props.py:49: AssertionError</failure></testcase><testcase classname="checks.test_props" name="test_p4_partition[x+--0.3]" time="0.101" /><testcase classname="checks.test_props" name="test_p4_partition[y--0.02]" time="0.100" /><testcase classname="checks.test_props" name="test_p4_partition[y--0.05]" time="0.101" /><testcase classname="checks.test_props" name="test_p4_partition[y--0.09]" time="0.101" /><testcase classname="checks.test_props" name="test_p4_partition[y--0.0999]" time="0.100" /><testcase classname="checks.test_props" name="test_p4_partition[y--0.1]" time="0.100" /><testcase classname="checks.test_props" name="test_p4_partition[y--0.1001]" time="0.101" /><testcase classname="checks.test_props" name="test_p4_partition[y--0.11]" time="0.101" /><testcase classname="checks.test_props" name="test_p4_partition[y--0.12]" time="0.101" /><testcase classname="checks.test_props" name="test_p4_partition[y--0.15]" time="0.101"><failure message="AssertionError: {'violations': 2244, 'no_class': 2243, 'pct_sum': 88.78, 'within_pct': 88.78}&#10;assert 2244 == 0">face = 'y-', d = 0.15
+
+    @pytest.mark.parametrize("d", SIGNED)
+    @pytest.mark.parametrize("face", list(H.FACES))
+    def test_p4_partition(face, d):
+        r = Pr.p4_partition(IMPL, N, SEED, face, d)
+&gt;       assert r["violations"] == 0, r
+E       AssertionError: {'violations': 2244, 'no_class': 2243, 'pct_sum': 88.78, 'within_pct': 88.78}
+E       assert 2244 == 0
+
+checks/test_props.py:49: AssertionError</failure></testcase><testcase classname="checks.test_props" name="test_p4_partition[y--0.3]" time="0.101" /><testcase classname="checks.test_props" name="test_p4_partition[y---0.02]" time="0.100" /><testcase classname="checks.test_props" name="test_p4_partition[y---0.05]" time="0.101" /><testcase classname="checks.test_props" name="test_p4_partition[y---0.09]" time="0.101" /><testcase classname="checks.test_props" name="test_p4_partition[y---0.0999]" time="0.101" /><testcase classname="checks.test_props" name="test_p4_partition[y---0.1]" time="0.103" /><testcase classname="checks.test_props" name="test_p4_partition[y---0.1001]" time="0.102" /><testcase classname="checks.test_props" name="test_p4_partition[y---0.11]" time="0.101" /><testcase classname="checks.test_props" name="test_p4_partition[y---0.12]" time="0.101" /><testcase classname="checks.test_props" name="test_p4_partition[y---0.15]" time="0.101"><failure message="AssertionError: {'violations': 2245, 'no_class': 2244, 'pct_sum': 88.78, 'within_pct': 88.59}&#10;assert 2245 == 0">face = 'y-', d = -0.15
+
+    @pytest.mark.parametrize("d", SIGNED)
+    @pytest.mark.parametrize("face", list(H.FACES))
+    def test_p4_partition(face, d):
+        r = Pr.p4_partition(IMPL, N, SEED, face, d)
+&gt;       assert r["violations"] == 0, r
+E       AssertionError: {'violations': 2245, 'no_class': 2244, 'pct_sum': 88.78, 'within_pct': 88.59}
+E       assert 2245 == 0
+
+checks/test_props.py:49: AssertionError</failure></testcase><testcase classname="checks.test_props" name="test_p4_partition[y---0.3]" time="0.101" /><testcase classname="checks.test_props" name="test_p4_partition[y+-0.02]" time="0.100" /><testcase classname="checks.test_props" name="test_p4_partition[y+-0.05]" time="0.101" /><testcase classname="checks.test_props" name="test_p4_partition[y+-0.09]" time="0.100" /><testcase classname="checks.test_props" name="test_p4_partition[y+-0.0999]" time="0.100" /><testcase classname="checks.test_props" name="test_p4_partition[y+-0.1]" time="0.101" /><testcase classname="checks.test_props" name="test_p4_partition[y+-0.1001]" time="0.100" /><testcase classname="checks.test_props" name="test_p4_partition[y+-0.11]" time="0.101" /><testcase classname="checks.test_props" name="test_p4_partition[y+-0.12]" time="0.101" /><testcase classname="checks.test_props" name="test_p4_partition[y+-0.15]" time="0.101"><failure message="AssertionError: {'violations': 2265, 'no_class': 2264, 'pct_sum': 88.68, 'within_pct': 88.68}&#10;assert 2265 == 0">face = 'y+', d = 0.15
+
+    @pytest.mark.parametrize("d", SIGNED)
+    @pytest.mark.parametrize("face", list(H.FACES))
+    def test_p4_partition(face, d):
+        r = Pr.p4_partition(IMPL, N, SEED, face, d)
+&gt;       assert r["violations"] == 0, r
+E       AssertionError: {'violations': 2265, 'no_class': 2264, 'pct_sum': 88.68, 'within_pct': 88.68}
+E       assert 2265 == 0
+
+checks/test_props.py:49: AssertionError</failure></testcase><testcase classname="checks.test_props" name="test_p4_partition[y+-0.3]" time="0.101" /><testcase classname="checks.test_props" name="test_p4_partition[y+--0.02]" time="0.100" /><testcase classname="checks.test_props" name="test_p4_partition[y+--0.05]" time="0.101" /><testcase classname="checks.test_props" name="test_p4_partition[y+--0.09]" time="0.101" /><testcase classname="checks.test_props" name="test_p4_partition[y+--0.0999]" time="0.101" /><testcase classname="checks.test_props" name="test_p4_partition[y+--0.1]" time="0.101" /><testcase classname="checks.test_props" name="test_p4_partition[y+--0.1001]" time="0.101" /><testcase classname="checks.test_props" name="test_p4_partition[y+--0.11]" time="0.101" /><testcase classname="checks.test_props" name="test_p4_partition[y+--0.12]" time="0.101" /><testcase classname="checks.test_props" name="test_p4_partition[y+--0.15]" time="0.101"><failure message="AssertionError: {'violations': 2266, 'no_class': 2265, 'pct_sum': 88.68, 'within_pct': 88.55}&#10;assert 2266 == 0">face = 'y+', d = -0.15
+
+    @pytest.mark.parametrize("d", SIGNED)
+    @pytest.mark.parametrize("face", list(H.FACES))
+    def test_p4_partition(face, d):
+        r = Pr.p4_partition(IMPL, N, SEED, face, d)
+&gt;       assert r["violations"] == 0, r
+E       AssertionError: {'violations': 2266, 'no_class': 2265, 'pct_sum': 88.68, 'within_pct': 88.55}
+E       assert 2266 == 0
+
+checks/test_props.py:49: AssertionError</failure></testcase><testcase classname="checks.test_props" name="test_p4_partition[y+--0.3]" time="0.102" /><testcase classname="checks.test_props" name="test_p4_partition[z--0.02]" time="0.101" /><testcase classname="checks.test_props" name="test_p4_partition[z--0.05]" time="0.101" /><testcase classname="checks.test_props" name="test_p4_partition[z--0.09]" time="0.101" /><testcase classname="checks.test_props" name="test_p4_partition[z--0.0999]" time="0.102" /><testcase classname="checks.test_props" name="test_p4_partition[z--0.1]" time="0.102"><failure message="AssertionError: {'violations': 6349, 'no_class': 6348, 'pct_sum': 68.26, 'within_pct': 68.26}&#10;assert 6349 == 0">face = 'z-', d = 0.1
+
+    @pytest.mark.parametrize("d", SIGNED)
+    @pytest.mark.parametrize("face", list(H.FACES))
+    def test_p4_partition(face, d):
+        r = Pr.p4_partition(IMPL, N, SEED, face, d)
+&gt;       assert r["violations"] == 0, r
+E       AssertionError: {'violations': 6349, 'no_class': 6348, 'pct_sum': 68.26, 'within_pct': 68.26}
+E       assert 6349 == 0
+
+checks/test_props.py:49: AssertionError</failure></testcase><testcase classname="checks.test_props" name="test_p4_partition[z--0.1001]" time="0.102"><failure message="AssertionError: {'violations': 6349, 'no_class': 6348, 'pct_sum': 68.26, 'within_pct': 68.26}&#10;assert 6349 == 0">face = 'z-', d = 0.1001
+
+    @pytest.mark.parametrize("d", SIGNED)
+    @pytest.mark.parametrize("face", list(H.FACES))
+    def test_p4_partition(face, d):
+        r = Pr.p4_partition(IMPL, N, SEED, face, d)
+&gt;       assert r["violations"] == 0, r
+E       AssertionError: {'violations': 6349, 'no_class': 6348, 'pct_sum': 68.26, 'within_pct': 68.26}
+E       assert 6349 == 0
+
+checks/test_props.py:49: AssertionError</failure></testcase><testcase classname="checks.test_props" name="test_p4_partition[z--0.11]" time="0.102"><failure message="AssertionError: {'violations': 6349, 'no_class': 6348, 'pct_sum': 68.26, 'within_pct': 68.26}&#10;assert 6349 == 0">face = 'z-', d = 0.11
+
+    @pytest.mark.parametrize("d", SIGNED)
+    @pytest.mark.parametrize("face", list(H.FACES))
+    def test_p4_partition(face, d):
+        r = Pr.p4_partition(IMPL, N, SEED, face, d)
+&gt;       assert r["violations"] == 0, r
+E       AssertionError: {'violations': 6349, 'no_class': 6348, 'pct_sum': 68.26, 'within_pct': 68.26}
+E       assert 6349 == 0
+
+checks/test_props.py:49: AssertionError</failure></testcase><testcase classname="checks.test_props" name="test_p4_partition[z--0.12]" time="0.102"><failure message="AssertionError: {'violations': 6349, 'no_class': 6348, 'pct_sum': 68.26, 'within_pct': 68.26}&#10;assert 6349 == 0">face = 'z-', d = 0.12
+
+    @pytest.mark.parametrize("d", SIGNED)
+    @pytest.mark.parametrize("face", list(H.FACES))
+    def test_p4_partition(face, d):
+        r = Pr.p4_partition(IMPL, N, SEED, face, d)
+&gt;       assert r["violations"] == 0, r
+E       AssertionError: {'violations': 6349, 'no_class': 6348, 'pct_sum': 68.26, 'within_pct': 68.26}
+E       assert 6349 == 0
+
+checks/test_props.py:49: AssertionError</failure></testcase><testcase classname="checks.test_props" name="test_p4_partition[z--0.15]" time="0.103" /><testcase classname="checks.test_props" name="test_p4_partition[z--0.3]" time="0.103" /><testcase classname="checks.test_props" name="test_p4_partition[z---0.02]" time="0.101" /><testcase classname="checks.test_props" name="test_p4_partition[z---0.05]" time="0.101" /><testcase classname="checks.test_props" name="test_p4_partition[z---0.09]" time="0.102" /><testcase classname="checks.test_props" name="test_p4_partition[z---0.0999]" time="0.102" /><testcase classname="checks.test_props" name="test_p4_partition[z---0.1]" time="0.102" /><testcase classname="checks.test_props" name="test_p4_partition[z---0.1001]" time="0.102"><failure message="AssertionError: {'violations': 6357, 'no_class': 6356, 'pct_sum': 68.22, 'within_pct': 68.06}&#10;assert 6357 == 0">face = 'z-', d = -0.1001
+
+    @pytest.mark.parametrize("d", SIGNED)
+    @pytest.mark.parametrize("face", list(H.FACES))
+    def test_p4_partition(face, d):
+        r = Pr.p4_partition(IMPL, N, SEED, face, d)
+&gt;       assert r["violations"] == 0, r
+E       AssertionError: {'violations': 6357, 'no_class': 6356, 'pct_sum': 68.22, 'within_pct': 68.06}
+E       assert 6357 == 0
+
+checks/test_props.py:49: AssertionError</failure></testcase><testcase classname="checks.test_props" name="test_p4_partition[z---0.11]" time="0.102"><failure message="AssertionError: {'violations': 6357, 'no_class': 6356, 'pct_sum': 68.22, 'within_pct': 68.05}&#10;assert 6357 == 0">face = 'z-', d = -0.11
+
+    @pytest.mark.parametrize("d", SIGNED)
+    @pytest.mark.parametrize("face", list(H.FACES))
+    def test_p4_partition(face, d):
+        r = Pr.p4_partition(IMPL, N, SEED, face, d)
+&gt;       assert r["violations"] == 0, r
+E       AssertionError: {'violations': 6357, 'no_class': 6356, 'pct_sum': 68.22, 'within_pct': 68.05}
+E       assert 6357 == 0
+
+checks/test_props.py:49: AssertionError</failure></testcase><testcase classname="checks.test_props" name="test_p4_partition[z---0.12]" time="0.102"><failure message="AssertionError: {'violations': 6357, 'no_class': 6356, 'pct_sum': 68.22, 'within_pct': 68.03}&#10;assert 6357 == 0">face = 'z-', d = -0.12
+
+    @pytest.mark.parametrize("d", SIGNED)
+    @pytest.mark.parametrize("face", list(H.FACES))
+    def test_p4_partition(face, d):
+        r = Pr.p4_partition(IMPL, N, SEED, face, d)
+&gt;       assert r["violations"] == 0, r
+E       AssertionError: {'violations': 6357, 'no_class': 6356, 'pct_sum': 68.22, 'within_pct': 68.03}
+E       assert 6357 == 0
+
+checks/test_props.py:49: AssertionError</failure></testcase><testcase classname="checks.test_props" name="test_p4_partition[z---0.15]" time="0.102"><failure message="AssertionError: {'violations': 6357, 'no_class': 6356, 'pct_sum': 68.22, 'within_pct': 67.96}&#10;assert 6357 == 0">face = 'z-', d = -0.15
+
+    @pytest.mark.parametrize("d", SIGNED)
+    @pytest.mark.parametrize("face", list(H.FACES))
+    def test_p4_partition(face, d):
+        r = Pr.p4_partition(IMPL, N, SEED, face, d)
+&gt;       assert r["violations"] == 0, r
+E       AssertionError: {'violations': 6357, 'no_class': 6356, 'pct_sum': 68.22, 'within_pct': 67.96}
+E       assert 6357 == 0
+
+checks/test_props.py:49: AssertionError</failure></testcase><testcase classname="checks.test_props" name="test_p4_partition[z---0.3]" time="0.104" /><testcase classname="checks.test_props" name="test_p4_partition[z+-0.02]" time="0.101" /><testcase classname="checks.test_props" name="test_p4_partition[z+-0.05]" time="0.102" /><testcase classname="checks.test_props" name="test_p4_partition[z+-0.09]" time="0.102" /><testcase classname="checks.test_props" name="test_p4_partition[z+-0.0999]" time="0.102" /><testcase classname="checks.test_props" name="test_p4_partition[z+-0.1]" time="0.104"><failure message="AssertionError: {'violations': 6570, 'no_class': 6569, 'pct_sum': 67.15, 'within_pct': 67.15}&#10;assert 6570 == 0">face = 'z+', d = 0.1
+
+    @pytest.mark.parametrize("d", SIGNED)
+    @pytest.mark.parametrize("face", list(H.FACES))
+    def test_p4_partition(face, d):
+        r = Pr.p4_partition(IMPL, N, SEED, face, d)
+&gt;       assert r["violations"] == 0, r
+E       AssertionError: {'violations': 6570, 'no_class': 6569, 'pct_sum': 67.15, 'within_pct': 67.15}
+E       assert 6570 == 0
+
+checks/test_props.py:49: AssertionError</failure></testcase><testcase classname="checks.test_props" name="test_p4_partition[z+-0.1001]" time="0.102"><failure message="AssertionError: {'violations': 6570, 'no_class': 6569, 'pct_sum': 67.15, 'within_pct': 67.15}&#10;assert 6570 == 0">face = 'z+', d = 0.1001
+
+    @pytest.mark.parametrize("d", SIGNED)
+    @pytest.mark.parametrize("face", list(H.FACES))
+    def test_p4_partition(face, d):
+        r = Pr.p4_partition(IMPL, N, SEED, face, d)
+&gt;       assert r["violations"] == 0, r
+E       AssertionError: {'violations': 6570, 'no_class': 6569, 'pct_sum': 67.15, 'within_pct': 67.15}
+E       assert 6570 == 0
+
+checks/test_props.py:49: AssertionError</failure></testcase><testcase classname="checks.test_props" name="test_p4_partition[z+-0.11]" time="0.102"><failure message="AssertionError: {'violations': 6570, 'no_class': 6569, 'pct_sum': 67.15, 'within_pct': 67.15}&#10;assert 6570 == 0">face = 'z+', d = 0.11
+
+    @pytest.mark.parametrize("d", SIGNED)
+    @pytest.mark.parametrize("face", list(H.FACES))
+    def test_p4_partition(face, d):
+        r = Pr.p4_partition(IMPL, N, SEED, face, d)
+&gt;       assert r["violations"] == 0, r
+E       AssertionError: {'violations': 6570, 'no_class': 6569, 'pct_sum': 67.15, 'within_pct': 67.15}
+E       assert 6570 == 0
+
+checks/test_props.py:49: AssertionError</failure></testcase><testcase classname="checks.test_props" name="test_p4_partition[z+-0.12]" time="0.102"><failure message="AssertionError: {'violations': 6570, 'no_class': 6569, 'pct_sum': 67.15, 'within_pct': 67.15}&#10;assert 6570 == 0">face = 'z+', d = 0.12
+
+    @pytest.mark.parametrize("d", SIGNED)
+    @pytest.mark.parametrize("face", list(H.FACES))
+    def test_p4_partition(face, d):
+        r = Pr.p4_partition(IMPL, N, SEED, face, d)
+&gt;       assert r["violations"] == 0, r
+E       AssertionError: {'violations': 6570, 'no_class': 6569, 'pct_sum': 67.15, 'within_pct': 67.15}
+E       assert 6570 == 0
+
+checks/test_props.py:49: AssertionError</failure></testcase><testcase classname="checks.test_props" name="test_p4_partition[z+-0.15]" time="0.102" /><testcase classname="checks.test_props" name="test_p4_partition[z+-0.3]" time="0.103" /><testcase classname="checks.test_props" name="test_p4_partition[z+--0.02]" time="0.101" /><testcase classname="checks.test_props" name="test_p4_partition[z+--0.05]" time="0.102" /><testcase classname="checks.test_props" name="test_p4_partition[z+--0.09]" time="0.102" /><testcase classname="checks.test_props" name="test_p4_partition[z+--0.0999]" time="0.102" /><testcase classname="checks.test_props" name="test_p4_partition[z+--0.1]" time="0.104" /><testcase classname="checks.test_props" name="test_p4_partition[z+--0.1001]" time="0.103"><failure message="AssertionError: {'violations': 6583, 'no_class': 6582, 'pct_sum': 67.09, 'within_pct': 66.91}&#10;assert 6583 == 0">face = 'z+', d = -0.1001
+
+    @pytest.mark.parametrize("d", SIGNED)
+    @pytest.mark.parametrize("face", list(H.FACES))
+    def test_p4_partition(face, d):
+        r = Pr.p4_partition(IMPL, N, SEED, face, d)
+&gt;       assert r["violations"] == 0, r
+E       AssertionError: {'violations': 6583, 'no_class': 6582, 'pct_sum': 67.09, 'within_pct': 66.91}
+E       assert 6583 == 0
+
+checks/test_props.py:49: AssertionError</failure></testcase><testcase classname="checks.test_props" name="test_p4_partition[z+--0.11]" time="0.103"><failure message="AssertionError: {'violations': 6583, 'no_class': 6582, 'pct_sum': 67.09, 'within_pct': 66.9}&#10;assert 6583 == 0">face = 'z+', d = -0.11
+
+    @pytest.mark.parametrize("d", SIGNED)
+    @pytest.mark.parametrize("face", list(H.FACES))
+    def test_p4_partition(face, d):
+        r = Pr.p4_partition(IMPL, N, SEED, face, d)
+&gt;       assert r["violations"] == 0, r
+E       AssertionError: {'violations': 6583, 'no_class': 6582, 'pct_sum': 67.09, 'within_pct': 66.9}
+E       assert 6583 == 0
+
+checks/test_props.py:49: AssertionError</failure></testcase><testcase classname="checks.test_props" name="test_p4_partition[z+--0.12]" time="0.102"><failure message="AssertionError: {'violations': 6583, 'no_class': 6582, 'pct_sum': 67.09, 'within_pct': 66.86}&#10;assert 6583 == 0">face = 'z+', d = -0.12
+
+    @pytest.mark.parametrize("d", SIGNED)
+    @pytest.mark.parametrize("face", list(H.FACES))
+    def test_p4_partition(face, d):
+        r = Pr.p4_partition(IMPL, N, SEED, face, d)
+&gt;       assert r["violations"] == 0, r
+E       AssertionError: {'violations': 6583, 'no_class': 6582, 'pct_sum': 67.09, 'within_pct': 66.86}
+E       assert 6583 == 0
+
+checks/test_props.py:49: AssertionError</failure></testcase><testcase classname="checks.test_props" name="test_p4_partition[z+--0.15]" time="0.102"><failure message="AssertionError: {'violations': 6583, 'no_class': 6582, 'pct_sum': 67.09, 'within_pct': 66.8}&#10;assert 6583 == 0">face = 'z+', d = -0.15
+
+    @pytest.mark.parametrize("d", SIGNED)
+    @pytest.mark.parametrize("face", list(H.FACES))
+    def test_p4_partition(face, d):
+        r = Pr.p4_partition(IMPL, N, SEED, face, d)
+&gt;       assert r["violations"] == 0, r
+E       AssertionError: {'violations': 6583, 'no_class': 6582, 'pct_sum': 67.09, 'within_pct': 66.8}
+E       assert 6583 == 0
+
+checks/test_props.py:49: AssertionError</failure></testcase><testcase classname="checks.test_props" name="test_p4_partition[z+--0.3]" time="0.103" /><testcase classname="checks.test_props" name="test_p5_invariance[x--0.05-shift]" time="0.244" /><testcase classname="checks.test_props" name="test_p5_invariance[x--0.05-rx]" time="0.246"><failure message="AssertionError: {'violations': 3, 'within_pct': (100.0, 100.0)}&#10;assert 3 == 0">face = 'x-', d = 0.05, pose = 'rx'
+
+    @pytest.mark.parametrize("pose", ("shift", "rx", "ry", "rz"))
+    @pytest.mark.parametrize("d", (0.05, 0.11, -0.11))
+    @pytest.mark.parametrize("face", list(H.FACES))
+    def test_p5_invariance(face, d, pose):
+        r = Pr.p5_invariance(IMPL, N, SEED, face, d, pose)
+&gt;       assert r["violations"] == 0, r
+E       AssertionError: {'violations': 3, 'within_pct': (100.0, 100.0)}
+E       assert 3 == 0
+
+checks/test_props.py:57: AssertionError</failure></testcase><testcase classname="checks.test_props" name="test_p5_invariance[x--0.05-ry]" time="0.245"><failure message="AssertionError: {'violations': 1292, 'within_pct': (100.0, 100.0)}&#10;assert 1292 == 0">face = 'x-', d = 0.05, pose = 'ry'
+
+    @pytest.mark.parametrize("pose", ("shift", "rx", "ry", "rz"))
+    @pytest.mark.parametrize("d", (0.05, 0.11, -0.11))
+    @pytest.mark.parametrize("face", list(H.FACES))
+    def test_p5_invariance(face, d, pose):
+        r = Pr.p5_invariance(IMPL, N, SEED, face, d, pose)
+&gt;       assert r["violations"] == 0, r
+E       AssertionError: {'violations': 1292, 'within_pct': (100.0, 100.0)}
+E       assert 1292 == 0
+
+checks/test_props.py:57: AssertionError</failure></testcase><testcase classname="checks.test_props" name="test_p5_invariance[x--0.05-rz]" time="0.244" /><testcase classname="checks.test_props" name="test_p5_invariance[x--0.11-shift]" time="0.245" /><testcase classname="checks.test_props" name="test_p5_invariance[x--0.11-rx]" time="0.245"><failure message="AssertionError: {'violations': 3, 'within_pct': (100.0, 100.0)}&#10;assert 3 == 0">face = 'x-', d = 0.11, pose = 'rx'
+
+    @pytest.mark.parametrize("pose", ("shift", "rx", "ry", "rz"))
+    @pytest.mark.parametrize("d", (0.05, 0.11, -0.11))
+    @pytest.mark.parametrize("face", list(H.FACES))
+    def test_p5_invariance(face, d, pose):
+        r = Pr.p5_invariance(IMPL, N, SEED, face, d, pose)
+&gt;       assert r["violations"] == 0, r
+E       AssertionError: {'violations': 3, 'within_pct': (100.0, 100.0)}
+E       assert 3 == 0
+
+checks/test_props.py:57: AssertionError</failure></testcase><testcase classname="checks.test_props" name="test_p5_invariance[x--0.11-ry]" time="0.245"><failure message="AssertionError: {'violations': 2581, 'within_pct': (100.0, 93.55)}&#10;assert 2581 == 0">face = 'x-', d = 0.11, pose = 'ry'
+
+    @pytest.mark.parametrize("pose", ("shift", "rx", "ry", "rz"))
+    @pytest.mark.parametrize("d", (0.05, 0.11, -0.11))
+    @pytest.mark.parametrize("face", list(H.FACES))
+    def test_p5_invariance(face, d, pose):
+        r = Pr.p5_invariance(IMPL, N, SEED, face, d, pose)
+&gt;       assert r["violations"] == 0, r
+E       AssertionError: {'violations': 2581, 'within_pct': (100.0, 93.55)}
+E       assert 2581 == 0
+
+checks/test_props.py:57: AssertionError</failure></testcase><testcase classname="checks.test_props" name="test_p5_invariance[x--0.11-rz]" time="0.244" /><testcase classname="checks.test_props" name="test_p5_invariance[x---0.11-shift]" time="0.247" /><testcase classname="checks.test_props" name="test_p5_invariance[x---0.11-rx]" time="0.245" /><testcase classname="checks.test_props" name="test_p5_invariance[x---0.11-ry]" time="0.246"><failure message="AssertionError: {'violations': 2596, 'within_pct': (99.89, 93.4)}&#10;assert 2596 == 0">face = 'x-', d = -0.11, pose = 'ry'
+
+    @pytest.mark.parametrize("pose", ("shift", "rx", "ry", "rz"))
+    @pytest.mark.parametrize("d", (0.05, 0.11, -0.11))
+    @pytest.mark.parametrize("face", list(H.FACES))
+    def test_p5_invariance(face, d, pose):
+        r = Pr.p5_invariance(IMPL, N, SEED, face, d, pose)
+&gt;       assert r["violations"] == 0, r
+E       AssertionError: {'violations': 2596, 'within_pct': (99.89, 93.4)}
+E       assert 2596 == 0
+
+checks/test_props.py:57: AssertionError</failure></testcase><testcase classname="checks.test_props" name="test_p5_invariance[x---0.11-rz]" time="0.245" /><testcase classname="checks.test_props" name="test_p5_invariance[x+-0.05-shift]" time="0.245" /><testcase classname="checks.test_props" name="test_p5_invariance[x+-0.05-rx]" time="0.245"><failure message="AssertionError: {'violations': 10, 'within_pct': (100.0, 100.0)}&#10;assert 10 == 0">face = 'x+', d = 0.05, pose = 'rx'
+
+    @pytest.mark.parametrize("pose", ("shift", "rx", "ry", "rz"))
+    @pytest.mark.parametrize("d", (0.05, 0.11, -0.11))
+    @pytest.mark.parametrize("face", list(H.FACES))
+    def test_p5_invariance(face, d, pose):
+        r = Pr.p5_invariance(IMPL, N, SEED, face, d, pose)
+&gt;       assert r["violations"] == 0, r
+E       AssertionError: {'violations': 10, 'within_pct': (100.0, 100.0)}
+E       assert 10 == 0
+
+checks/test_props.py:57: AssertionError</failure></testcase><testcase classname="checks.test_props" name="test_p5_invariance[x+-0.05-ry]" time="0.245"><failure message="AssertionError: {'violations': 1258, 'within_pct': (100.0, 100.0)}&#10;assert 1258 == 0">face = 'x+', d = 0.05, pose = 'ry'
+
+    @pytest.mark.parametrize("pose", ("shift", "rx", "ry", "rz"))
+    @pytest.mark.parametrize("d", (0.05, 0.11, -0.11))
+    @pytest.mark.parametrize("face", list(H.FACES))
+    def test_p5_invariance(face, d, pose):
+        r = Pr.p5_invariance(IMPL, N, SEED, face, d, pose)
+&gt;       assert r["violations"] == 0, r
+E       AssertionError: {'violations': 1258, 'within_pct': (100.0, 100.0)}
+E       assert 1258 == 0
+
+checks/test_props.py:57: AssertionError</failure></testcase><testcase classname="checks.test_props" name="test_p5_invariance[x+-0.05-rz]" time="0.244" /><testcase classname="checks.test_props" name="test_p5_invariance[x+-0.11-shift]" time="0.246" /><testcase classname="checks.test_props" name="test_p5_invariance[x+-0.11-rx]" time="0.245"><failure message="AssertionError: {'violations': 10, 'within_pct': (100.0, 100.0)}&#10;assert 10 == 0">face = 'x+', d = 0.11, pose = 'rx'
+
+    @pytest.mark.parametrize("pose", ("shift", "rx", "ry", "rz"))
+    @pytest.mark.parametrize("d", (0.05, 0.11, -0.11))
+    @pytest.mark.parametrize("face", list(H.FACES))
+    def test_p5_invariance(face, d, pose):
+        r = Pr.p5_invariance(IMPL, N, SEED, face, d, pose)
+&gt;       assert r["violations"] == 0, r
+E       AssertionError: {'violations': 10, 'within_pct': (100.0, 100.0)}
+E       assert 10 == 0
+
+checks/test_props.py:57: AssertionError</failure></testcase><testcase classname="checks.test_props" name="test_p5_invariance[x+-0.11-ry]" time="0.247"><failure message="AssertionError: {'violations': 2509, 'within_pct': (100.0, 93.74)}&#10;assert 2509 == 0">face = 'x+', d = 0.11, pose = 'ry'
+
+    @pytest.mark.parametrize("pose", ("shift", "rx", "ry", "rz"))
+    @pytest.mark.parametrize("d", (0.05, 0.11, -0.11))
+    @pytest.mark.parametrize("face", list(H.FACES))
+    def test_p5_invariance(face, d, pose):
+        r = Pr.p5_invariance(IMPL, N, SEED, face, d, pose)
+&gt;       assert r["violations"] == 0, r
+E       AssertionError: {'violations': 2509, 'within_pct': (100.0, 93.74)}
+E       assert 2509 == 0
+
+checks/test_props.py:57: AssertionError</failure></testcase><testcase classname="checks.test_props" name="test_p5_invariance[x+-0.11-rz]" time="0.244" /><testcase classname="checks.test_props" name="test_p5_invariance[x+--0.11-shift]" time="0.245" /><testcase classname="checks.test_props" name="test_p5_invariance[x+--0.11-rx]" time="0.245" /><testcase classname="checks.test_props" name="test_p5_invariance[x+--0.11-ry]" time="0.245"><failure message="AssertionError: {'violations': 2532, 'within_pct': (99.91, 93.58)}&#10;assert 2532 == 0">face = 'x+', d = -0.11, pose = 'ry'
+
+    @pytest.mark.parametrize("pose", ("shift", "rx", "ry", "rz"))
+    @pytest.mark.parametrize("d", (0.05, 0.11, -0.11))
+    @pytest.mark.parametrize("face", list(H.FACES))
+    def test_p5_invariance(face, d, pose):
+        r = Pr.p5_invariance(IMPL, N, SEED, face, d, pose)
+&gt;       assert r["violations"] == 0, r
+E       AssertionError: {'violations': 2532, 'within_pct': (99.91, 93.58)}
+E       assert 2532 == 0
+
+checks/test_props.py:57: AssertionError</failure></testcase><testcase classname="checks.test_props" name="test_p5_invariance[x+--0.11-rz]" time="0.245" /><testcase classname="checks.test_props" name="test_p5_invariance[y--0.05-shift]" time="0.244" /><testcase classname="checks.test_props" name="test_p5_invariance[y--0.05-rx]" time="0.244"><failure message="AssertionError: {'violations': 2243, 'within_pct': (100.0, 100.0)}&#10;assert 2243 == 0">face = 'y-', d = 0.05, pose = 'rx'
+
+    @pytest.mark.parametrize("pose", ("shift", "rx", "ry", "rz"))
+    @pytest.mark.parametrize("d", (0.05, 0.11, -0.11))
+    @pytest.mark.parametrize("face", list(H.FACES))
+    def test_p5_invariance(face, d, pose):
+        r = Pr.p5_invariance(IMPL, N, SEED, face, d, pose)
+&gt;       assert r["violations"] == 0, r
+E       AssertionError: {'violations': 2243, 'within_pct': (100.0, 100.0)}
+E       assert 2243 == 0
+
+checks/test_props.py:57: AssertionError</failure></testcase><testcase classname="checks.test_props" name="test_p5_invariance[y--0.05-ry]" time="0.246"><failure message="AssertionError: {'violations': 5, 'within_pct': (100.0, 100.0)}&#10;assert 5 == 0">face = 'y-', d = 0.05, pose = 'ry'
+
+    @pytest.mark.parametrize("pose", ("shift", "rx", "ry", "rz"))
+    @pytest.mark.parametrize("d", (0.05, 0.11, -0.11))
+    @pytest.mark.parametrize("face", list(H.FACES))
+    def test_p5_invariance(face, d, pose):
+        r = Pr.p5_invariance(IMPL, N, SEED, face, d, pose)
+&gt;       assert r["violations"] == 0, r
+E       AssertionError: {'violations': 5, 'within_pct': (100.0, 100.0)}
+E       assert 5 == 0
+
+checks/test_props.py:57: AssertionError</failure></testcase><testcase classname="checks.test_props" name="test_p5_invariance[y--0.05-rz]" time="0.244" /><testcase classname="checks.test_props" name="test_p5_invariance[y--0.11-shift]" time="0.244" /><testcase classname="checks.test_props" name="test_p5_invariance[y--0.11-rx]" time="0.247"><failure message="AssertionError: {'violations': 4482, 'within_pct': (100.0, 88.8)}&#10;assert 4482 == 0">face = 'y-', d = 0.11, pose = 'rx'
+
+    @pytest.mark.parametrize("pose", ("shift", "rx", "ry", "rz"))
+    @pytest.mark.parametrize("d", (0.05, 0.11, -0.11))
+    @pytest.mark.parametrize("face", list(H.FACES))
+    def test_p5_invariance(face, d, pose):
+        r = Pr.p5_invariance(IMPL, N, SEED, face, d, pose)
+&gt;       assert r["violations"] == 0, r
+E       AssertionError: {'violations': 4482, 'within_pct': (100.0, 88.8)}
+E       assert 4482 == 0
+
+checks/test_props.py:57: AssertionError</failure></testcase><testcase classname="checks.test_props" name="test_p5_invariance[y--0.11-ry]" time="0.245"><failure message="AssertionError: {'violations': 5, 'within_pct': (100.0, 100.0)}&#10;assert 5 == 0">face = 'y-', d = 0.11, pose = 'ry'
+
+    @pytest.mark.parametrize("pose", ("shift", "rx", "ry", "rz"))
+    @pytest.mark.parametrize("d", (0.05, 0.11, -0.11))
+    @pytest.mark.parametrize("face", list(H.FACES))
+    def test_p5_invariance(face, d, pose):
+        r = Pr.p5_invariance(IMPL, N, SEED, face, d, pose)
+&gt;       assert r["violations"] == 0, r
+E       AssertionError: {'violations': 5, 'within_pct': (100.0, 100.0)}
+E       assert 5 == 0
+
+checks/test_props.py:57: AssertionError</failure></testcase><testcase classname="checks.test_props" name="test_p5_invariance[y--0.11-rz]" time="0.245" /><testcase classname="checks.test_props" name="test_p5_invariance[y---0.11-shift]" time="0.246" /><testcase classname="checks.test_props" name="test_p5_invariance[y---0.11-rx]" time="0.246"><failure message="AssertionError: {'violations': 4494, 'within_pct': (99.87, 88.63)}&#10;assert 4494 == 0">face = 'y-', d = -0.11, pose = 'rx'
+
+    @pytest.mark.parametrize("pose", ("shift", "rx", "ry", "rz"))
+    @pytest.mark.parametrize("d", (0.05, 0.11, -0.11))
+    @pytest.mark.parametrize("face", list(H.FACES))
+    def test_p5_invariance(face, d, pose):
+        r = Pr.p5_invariance(IMPL, N, SEED, face, d, pose)
+&gt;       assert r["violations"] == 0, r
+E       AssertionError: {'violations': 4494, 'within_pct': (99.87, 88.63)}
+E       assert 4494 == 0
+
+checks/test_props.py:57: AssertionError</failure></testcase><testcase classname="checks.test_props" name="test_p5_invariance[y---0.11-ry]" time="0.245" /><testcase classname="checks.test_props" name="test_p5_invariance[y---0.11-rz]" time="0.245" /><testcase classname="checks.test_props" name="test_p5_invariance[y+-0.05-shift]" time="0.244" /><testcase classname="checks.test_props" name="test_p5_invariance[y+-0.05-rx]" time="0.245"><failure message="AssertionError: {'violations': 2264, 'within_pct': (100.0, 100.0)}&#10;assert 2264 == 0">face = 'y+', d = 0.05, pose = 'rx'
+
+    @pytest.mark.parametrize("pose", ("shift", "rx", "ry", "rz"))
+    @pytest.mark.parametrize("d", (0.05, 0.11, -0.11))
+    @pytest.mark.parametrize("face", list(H.FACES))
+    def test_p5_invariance(face, d, pose):
+        r = Pr.p5_invariance(IMPL, N, SEED, face, d, pose)
+&gt;       assert r["violations"] == 0, r
+E       AssertionError: {'violations': 2264, 'within_pct': (100.0, 100.0)}
+E       assert 2264 == 0
+
+checks/test_props.py:57: AssertionError</failure></testcase><testcase classname="checks.test_props" name="test_p5_invariance[y+-0.05-ry]" time="0.244"><failure message="AssertionError: {'violations': 5, 'within_pct': (100.0, 100.0)}&#10;assert 5 == 0">face = 'y+', d = 0.05, pose = 'ry'
+
+    @pytest.mark.parametrize("pose", ("shift", "rx", "ry", "rz"))
+    @pytest.mark.parametrize("d", (0.05, 0.11, -0.11))
+    @pytest.mark.parametrize("face", list(H.FACES))
+    def test_p5_invariance(face, d, pose):
+        r = Pr.p5_invariance(IMPL, N, SEED, face, d, pose)
+&gt;       assert r["violations"] == 0, r
+E       AssertionError: {'violations': 5, 'within_pct': (100.0, 100.0)}
+E       assert 5 == 0
+
+checks/test_props.py:57: AssertionError</failure></testcase><testcase classname="checks.test_props" name="test_p5_invariance[y+-0.05-rz]" time="0.244" /><testcase classname="checks.test_props" name="test_p5_invariance[y+-0.11-shift]" time="0.244" /><testcase classname="checks.test_props" name="test_p5_invariance[y+-0.11-rx]" time="0.245"><failure message="AssertionError: {'violations': 4524, 'within_pct': (100.0, 88.7)}&#10;assert 4524 == 0">face = 'y+', d = 0.11, pose = 'rx'
+
+    @pytest.mark.parametrize("pose", ("shift", "rx", "ry", "rz"))
+    @pytest.mark.parametrize("d", (0.05, 0.11, -0.11))
+    @pytest.mark.parametrize("face", list(H.FACES))
+    def test_p5_invariance(face, d, pose):
+        r = Pr.p5_invariance(IMPL, N, SEED, face, d, pose)
+&gt;       assert r["violations"] == 0, r
+E       AssertionError: {'violations': 4524, 'within_pct': (100.0, 88.7)}
+E       assert 4524 == 0
+
+checks/test_props.py:57: AssertionError</failure></testcase><testcase classname="checks.test_props" name="test_p5_invariance[y+-0.11-ry]" time="0.244"><failure message="AssertionError: {'violations': 5, 'within_pct': (100.0, 100.0)}&#10;assert 5 == 0">face = 'y+', d = 0.11, pose = 'ry'
+
+    @pytest.mark.parametrize("pose", ("shift", "rx", "ry", "rz"))
+    @pytest.mark.parametrize("d", (0.05, 0.11, -0.11))
+    @pytest.mark.parametrize("face", list(H.FACES))
+    def test_p5_invariance(face, d, pose):
+        r = Pr.p5_invariance(IMPL, N, SEED, face, d, pose)
+&gt;       assert r["violations"] == 0, r
+E       AssertionError: {'violations': 5, 'within_pct': (100.0, 100.0)}
+E       assert 5 == 0
+
+checks/test_props.py:57: AssertionError</failure></testcase><testcase classname="checks.test_props" name="test_p5_invariance[y+-0.11-rz]" time="0.244" /><testcase classname="checks.test_props" name="test_p5_invariance[y+--0.11-shift]" time="0.245" /><testcase classname="checks.test_props" name="test_p5_invariance[y+--0.11-rx]" time="0.245"><failure message="AssertionError: {'violations': 4540, 'within_pct': (99.93, 88.57)}&#10;assert 4540 == 0">face = 'y+', d = -0.11, pose = 'rx'
+
+    @pytest.mark.parametrize("pose", ("shift", "rx", "ry", "rz"))
+    @pytest.mark.parametrize("d", (0.05, 0.11, -0.11))
+    @pytest.mark.parametrize("face", list(H.FACES))
+    def test_p5_invariance(face, d, pose):
+        r = Pr.p5_invariance(IMPL, N, SEED, face, d, pose)
+&gt;       assert r["violations"] == 0, r
+E       AssertionError: {'violations': 4540, 'within_pct': (99.93, 88.57)}
+E       assert 4540 == 0
+
+checks/test_props.py:57: AssertionError</failure></testcase><testcase classname="checks.test_props" name="test_p5_invariance[y+--0.11-ry]" time="0.245" /><testcase classname="checks.test_props" name="test_p5_invariance[y+--0.11-rz]" time="0.245" /><testcase classname="checks.test_props" name="test_p5_invariance[z--0.05-shift]" time="0.245" /><testcase classname="checks.test_props" name="test_p5_invariance[z--0.05-rx]" time="0.246"><failure message="AssertionError: {'violations': 6352, 'within_pct': (100.0, 100.0)}&#10;assert 6352 == 0">face = 'z-', d = 0.05, pose = 'rx'
+
+    @pytest.mark.parametrize("pose", ("shift", "rx", "ry", "rz"))
+    @pytest.mark.parametrize("d", (0.05, 0.11, -0.11))
+    @pytest.mark.parametrize("face", list(H.FACES))
+    def test_p5_invariance(face, d, pose):
+        r = Pr.p5_invariance(IMPL, N, SEED, face, d, pose)
+&gt;       assert r["violations"] == 0, r
+E       AssertionError: {'violations': 6352, 'within_pct': (100.0, 100.0)}
+E       assert 6352 == 0
+
+checks/test_props.py:57: AssertionError</failure></testcase><testcase classname="checks.test_props" name="test_p5_invariance[z--0.05-ry]" time="0.258"><failure message="AssertionError: {'violations': 6352, 'within_pct': (100.0, 100.0)}&#10;assert 6352 == 0">face = 'z-', d = 0.05, pose = 'ry'
+
+    @pytest.mark.parametrize("pose", ("shift", "rx", "ry", "rz"))
+    @pytest.mark.parametrize("d", (0.05, 0.11, -0.11))
+    @pytest.mark.parametrize("face", list(H.FACES))
+    def test_p5_invariance(face, d, pose):
+        r = Pr.p5_invariance(IMPL, N, SEED, face, d, pose)
+&gt;       assert r["violations"] == 0, r
+E       AssertionError: {'violations': 6352, 'within_pct': (100.0, 100.0)}
+E       assert 6352 == 0
+
+checks/test_props.py:57: AssertionError</failure></testcase><testcase classname="checks.test_props" name="test_p5_invariance[z--0.05-rz]" time="0.245" /><testcase classname="checks.test_props" name="test_p5_invariance[z--0.11-shift]" time="0.246" /><testcase classname="checks.test_props" name="test_p5_invariance[z--0.11-rx]" time="0.246"><failure message="AssertionError: {'violations': 12700, 'within_pct': (68.26, 100.0)}&#10;assert 12700 == 0">face = 'z-', d = 0.11, pose = 'rx'
+
+    @pytest.mark.parametrize("pose", ("shift", "rx", "ry", "rz"))
+    @pytest.mark.parametrize("d", (0.05, 0.11, -0.11))
+    @pytest.mark.parametrize("face", list(H.FACES))
+    def test_p5_invariance(face, d, pose):
+        r = Pr.p5_invariance(IMPL, N, SEED, face, d, pose)
+&gt;       assert r["violations"] == 0, r
+E       AssertionError: {'violations': 12700, 'within_pct': (68.26, 100.0)}
+E       assert 12700 == 0
+
+checks/test_props.py:57: AssertionError</failure></testcase><testcase classname="checks.test_props" name="test_p5_invariance[z--0.11-ry]" time="0.247"><failure message="AssertionError: {'violations': 12700, 'within_pct': (68.26, 100.0)}&#10;assert 12700 == 0">face = 'z-', d = 0.11, pose = 'ry'
+
+    @pytest.mark.parametrize("pose", ("shift", "rx", "ry", "rz"))
+    @pytest.mark.parametrize("d", (0.05, 0.11, -0.11))
+    @pytest.mark.parametrize("face", list(H.FACES))
+    def test_p5_invariance(face, d, pose):
+        r = Pr.p5_invariance(IMPL, N, SEED, face, d, pose)
+&gt;       assert r["violations"] == 0, r
+E       AssertionError: {'violations': 12700, 'within_pct': (68.26, 100.0)}
+E       assert 12700 == 0
+
+checks/test_props.py:57: AssertionError</failure></testcase><testcase classname="checks.test_props" name="test_p5_invariance[z--0.11-rz]" time="0.253" /><testcase classname="checks.test_props" name="test_p5_invariance[z---0.11-shift]" time="0.247" /><testcase classname="checks.test_props" name="test_p5_invariance[z---0.11-rx]" time="0.247"><failure message="AssertionError: {'violations': 12728, 'within_pct': (68.05, 99.87)}&#10;assert 12728 == 0">face = 'z-', d = -0.11, pose = 'rx'
+
+    @pytest.mark.parametrize("pose", ("shift", "rx", "ry", "rz"))
+    @pytest.mark.parametrize("d", (0.05, 0.11, -0.11))
+    @pytest.mark.parametrize("face", list(H.FACES))
+    def test_p5_invariance(face, d, pose):
+        r = Pr.p5_invariance(IMPL, N, SEED, face, d, pose)
+&gt;       assert r["violations"] == 0, r
+E       AssertionError: {'violations': 12728, 'within_pct': (68.05, 99.87)}
+E       assert 12728 == 0
+
+checks/test_props.py:57: AssertionError</failure></testcase><testcase classname="checks.test_props" name="test_p5_invariance[z---0.11-ry]" time="0.248"><failure message="AssertionError: {'violations': 12728, 'within_pct': (68.05, 99.87)}&#10;assert 12728 == 0">face = 'z-', d = -0.11, pose = 'ry'
+
+    @pytest.mark.parametrize("pose", ("shift", "rx", "ry", "rz"))
+    @pytest.mark.parametrize("d", (0.05, 0.11, -0.11))
+    @pytest.mark.parametrize("face", list(H.FACES))
+    def test_p5_invariance(face, d, pose):
+        r = Pr.p5_invariance(IMPL, N, SEED, face, d, pose)
+&gt;       assert r["violations"] == 0, r
+E       AssertionError: {'violations': 12728, 'within_pct': (68.05, 99.87)}
+E       assert 12728 == 0
+
+checks/test_props.py:57: AssertionError</failure></testcase><testcase classname="checks.test_props" name="test_p5_invariance[z---0.11-rz]" time="0.255" /><testcase classname="checks.test_props" name="test_p5_invariance[z+-0.05-shift]" time="0.254" /><testcase classname="checks.test_props" name="test_p5_invariance[z+-0.05-rx]" time="0.254"><failure message="AssertionError: {'violations': 6575, 'within_pct': (100.0, 100.0)}&#10;assert 6575 == 0">face = 'z+', d = 0.05, pose = 'rx'
+
+    @pytest.mark.parametrize("pose", ("shift", "rx", "ry", "rz"))
+    @pytest.mark.parametrize("d", (0.05, 0.11, -0.11))
+    @pytest.mark.parametrize("face", list(H.FACES))
+    def test_p5_invariance(face, d, pose):
+        r = Pr.p5_invariance(IMPL, N, SEED, face, d, pose)
+&gt;       assert r["violations"] == 0, r
+E       AssertionError: {'violations': 6575, 'within_pct': (100.0, 100.0)}
+E       assert 6575 == 0
+
+checks/test_props.py:57: AssertionError</failure></testcase><testcase classname="checks.test_props" name="test_p5_invariance[z+-0.05-ry]" time="0.254"><failure message="AssertionError: {'violations': 6576, 'within_pct': (100.0, 100.0)}&#10;assert 6576 == 0">face = 'z+', d = 0.05, pose = 'ry'
+
+    @pytest.mark.parametrize("pose", ("shift", "rx", "ry", "rz"))
+    @pytest.mark.parametrize("d", (0.05, 0.11, -0.11))
+    @pytest.mark.parametrize("face", list(H.FACES))
+    def test_p5_invariance(face, d, pose):
+        r = Pr.p5_invariance(IMPL, N, SEED, face, d, pose)
+&gt;       assert r["violations"] == 0, r
+E       AssertionError: {'violations': 6576, 'within_pct': (100.0, 100.0)}
+E       assert 6576 == 0
+
+checks/test_props.py:57: AssertionError</failure></testcase><testcase classname="checks.test_props" name="test_p5_invariance[z+-0.05-rz]" time="0.254" /><testcase classname="checks.test_props" name="test_p5_invariance[z+-0.11-shift]" time="0.255" /><testcase classname="checks.test_props" name="test_p5_invariance[z+-0.11-rx]" time="0.255"><failure message="AssertionError: {'violations': 13144, 'within_pct': (67.15, 100.0)}&#10;assert 13144 == 0">face = 'z+', d = 0.11, pose = 'rx'
+
+    @pytest.mark.parametrize("pose", ("shift", "rx", "ry", "rz"))
+    @pytest.mark.parametrize("d", (0.05, 0.11, -0.11))
+    @pytest.mark.parametrize("face", list(H.FACES))
+    def test_p5_invariance(face, d, pose):
+        r = Pr.p5_invariance(IMPL, N, SEED, face, d, pose)
+&gt;       assert r["violations"] == 0, r
+E       AssertionError: {'violations': 13144, 'within_pct': (67.15, 100.0)}
+E       assert 13144 == 0
+
+checks/test_props.py:57: AssertionError</failure></testcase><testcase classname="checks.test_props" name="test_p5_invariance[z+-0.11-ry]" time="0.254"><failure message="AssertionError: {'violations': 13145, 'within_pct': (67.15, 100.0)}&#10;assert 13145 == 0">face = 'z+', d = 0.11, pose = 'ry'
+
+    @pytest.mark.parametrize("pose", ("shift", "rx", "ry", "rz"))
+    @pytest.mark.parametrize("d", (0.05, 0.11, -0.11))
+    @pytest.mark.parametrize("face", list(H.FACES))
+    def test_p5_invariance(face, d, pose):
+        r = Pr.p5_invariance(IMPL, N, SEED, face, d, pose)
+&gt;       assert r["violations"] == 0, r
+E       AssertionError: {'violations': 13145, 'within_pct': (67.15, 100.0)}
+E       assert 13145 == 0
+
+checks/test_props.py:57: AssertionError</failure></testcase><testcase classname="checks.test_props" name="test_p5_invariance[z+-0.11-rz]" time="0.255" /><testcase classname="checks.test_props" name="test_p5_invariance[z+--0.11-shift]" time="0.255" /><testcase classname="checks.test_props" name="test_p5_invariance[z+--0.11-rx]" time="0.256"><failure message="AssertionError: {'violations': 13178, 'within_pct': (66.9, 99.84)}&#10;assert 13178 == 0">face = 'z+', d = -0.11, pose = 'rx'
+
+    @pytest.mark.parametrize("pose", ("shift", "rx", "ry", "rz"))
+    @pytest.mark.parametrize("d", (0.05, 0.11, -0.11))
+    @pytest.mark.parametrize("face", list(H.FACES))
+    def test_p5_invariance(face, d, pose):
+        r = Pr.p5_invariance(IMPL, N, SEED, face, d, pose)
+&gt;       assert r["violations"] == 0, r
+E       AssertionError: {'violations': 13178, 'within_pct': (66.9, 99.84)}
+E       assert 13178 == 0
+
+checks/test_props.py:57: AssertionError</failure></testcase><testcase classname="checks.test_props" name="test_p5_invariance[z+--0.11-ry]" time="0.256"><failure message="AssertionError: {'violations': 13178, 'within_pct': (66.9, 99.84)}&#10;assert 13178 == 0">face = 'z+', d = -0.11, pose = 'ry'
+
+    @pytest.mark.parametrize("pose", ("shift", "rx", "ry", "rz"))
+    @pytest.mark.parametrize("d", (0.05, 0.11, -0.11))
+    @pytest.mark.parametrize("face", list(H.FACES))
+    def test_p5_invariance(face, d, pose):
+        r = Pr.p5_invariance(IMPL, N, SEED, face, d, pose)
+&gt;       assert r["violations"] == 0, r
+E       AssertionError: {'violations': 13178, 'within_pct': (66.9, 99.84)}
+E       assert 13178 == 0
+
+checks/test_props.py:57: AssertionError</failure></testcase><testcase classname="checks.test_props" name="test_p5_invariance[z+--0.11-rz]" time="0.255" /><testcase classname="checks.test_props" name="test_p6_symmetry[x--0.02]" time="0.252" /><testcase classname="checks.test_props" name="test_p6_symmetry[x--0.09]" time="0.252" /><testcase classname="checks.test_props" name="test_p6_symmetry[x--0.0999]" time="0.252" /><testcase classname="checks.test_props" name="test_p6_symmetry[x--0.1001]" time="0.252" /><testcase classname="checks.test_props" name="test_p6_symmetry[x--0.11]" time="0.253" /><testcase classname="checks.test_props" name="test_p6_symmetry[x--0.12]" time="0.253" /><testcase classname="checks.test_props" name="test_p6_symmetry[x+-0.02]" time="0.252" /><testcase classname="checks.test_props" name="test_p6_symmetry[x+-0.09]" time="0.253"><failure message="AssertionError: {'violations': 3, 'face_points': 1261}&#10;assert 3 == 0">face = 'x+', d = 0.09
+
+    @pytest.mark.parametrize("d", Pr.P6_DELTAS)
+    @pytest.mark.parametrize("face", list(H.FACES))
+    def test_p6_symmetry(face, d):
+        r = Pr.p6_symmetry(IMPL, N, SEED, face, d)
+&gt;       assert r["violations"] == 0, r
+E       AssertionError: {'violations': 3, 'face_points': 1261}
+E       assert 3 == 0
+
+checks/test_props.py:64: AssertionError</failure></testcase><testcase classname="checks.test_props" name="test_p6_symmetry[x+-0.0999]" time="0.252"><failure message="AssertionError: {'violations': 3, 'face_points': 1261}&#10;assert 3 == 0">face = 'x+', d = 0.0999
+
+    @pytest.mark.parametrize("d", Pr.P6_DELTAS)
+    @pytest.mark.parametrize("face", list(H.FACES))
+    def test_p6_symmetry(face, d):
+        r = Pr.p6_symmetry(IMPL, N, SEED, face, d)
+&gt;       assert r["violations"] == 0, r
+E       AssertionError: {'violations': 3, 'face_points': 1261}
+E       assert 3 == 0
+
+checks/test_props.py:64: AssertionError</failure></testcase><testcase classname="checks.test_props" name="test_p6_symmetry[x+-0.1001]" time="0.253"><failure message="AssertionError: {'violations': 3, 'face_points': 1261}&#10;assert 3 == 0">face = 'x+', d = 0.1001
+
+    @pytest.mark.parametrize("d", Pr.P6_DELTAS)
+    @pytest.mark.parametrize("face", list(H.FACES))
+    def test_p6_symmetry(face, d):
+        r = Pr.p6_symmetry(IMPL, N, SEED, face, d)
+&gt;       assert r["violations"] == 0, r
+E       AssertionError: {'violations': 3, 'face_points': 1261}
+E       assert 3 == 0
+
+checks/test_props.py:64: AssertionError</failure></testcase><testcase classname="checks.test_props" name="test_p6_symmetry[x+-0.11]" time="0.253"><failure message="AssertionError: {'violations': 3, 'face_points': 1261}&#10;assert 3 == 0">face = 'x+', d = 0.11
+
+    @pytest.mark.parametrize("d", Pr.P6_DELTAS)
+    @pytest.mark.parametrize("face", list(H.FACES))
+    def test_p6_symmetry(face, d):
+        r = Pr.p6_symmetry(IMPL, N, SEED, face, d)
+&gt;       assert r["violations"] == 0, r
+E       AssertionError: {'violations': 3, 'face_points': 1261}
+E       assert 3 == 0
+
+checks/test_props.py:64: AssertionError</failure></testcase><testcase classname="checks.test_props" name="test_p6_symmetry[x+-0.12]" time="0.253"><failure message="AssertionError: {'violations': 3, 'face_points': 1261}&#10;assert 3 == 0">face = 'x+', d = 0.12
+
+    @pytest.mark.parametrize("d", Pr.P6_DELTAS)
+    @pytest.mark.parametrize("face", list(H.FACES))
+    def test_p6_symmetry(face, d):
+        r = Pr.p6_symmetry(IMPL, N, SEED, face, d)
+&gt;       assert r["violations"] == 0, r
+E       AssertionError: {'violations': 3, 'face_points': 1261}
+E       assert 3 == 0
+
+checks/test_props.py:64: AssertionError</failure></testcase><testcase classname="checks.test_props" name="test_p6_symmetry[y--0.02]" time="0.253" /><testcase classname="checks.test_props" name="test_p6_symmetry[y--0.09]" time="0.260"><failure message="AssertionError: {'violations': 1, 'face_points': 2244}&#10;assert 1 == 0">face = 'y-', d = 0.09
+
+    @pytest.mark.parametrize("d", Pr.P6_DELTAS)
+    @pytest.mark.parametrize("face", list(H.FACES))
+    def test_p6_symmetry(face, d):
+        r = Pr.p6_symmetry(IMPL, N, SEED, face, d)
+&gt;       assert r["violations"] == 0, r
+E       AssertionError: {'violations': 1, 'face_points': 2244}
+E       assert 1 == 0
+
+checks/test_props.py:64: AssertionError</failure></testcase><testcase classname="checks.test_props" name="test_p6_symmetry[y--0.0999]" time="0.253"><failure message="AssertionError: {'violations': 1, 'face_points': 2244}&#10;assert 1 == 0">face = 'y-', d = 0.0999
+
+    @pytest.mark.parametrize("d", Pr.P6_DELTAS)
+    @pytest.mark.parametrize("face", list(H.FACES))
+    def test_p6_symmetry(face, d):
+        r = Pr.p6_symmetry(IMPL, N, SEED, face, d)
+&gt;       assert r["violations"] == 0, r
+E       AssertionError: {'violations': 1, 'face_points': 2244}
+E       assert 1 == 0
+
+checks/test_props.py:64: AssertionError</failure></testcase><testcase classname="checks.test_props" name="test_p6_symmetry[y--0.1001]" time="0.253"><failure message="AssertionError: {'violations': 1, 'face_points': 2244}&#10;assert 1 == 0">face = 'y-', d = 0.1001
+
+    @pytest.mark.parametrize("d", Pr.P6_DELTAS)
+    @pytest.mark.parametrize("face", list(H.FACES))
+    def test_p6_symmetry(face, d):
+        r = Pr.p6_symmetry(IMPL, N, SEED, face, d)
+&gt;       assert r["violations"] == 0, r
+E       AssertionError: {'violations': 1, 'face_points': 2244}
+E       assert 1 == 0
+
+checks/test_props.py:64: AssertionError</failure></testcase><testcase classname="checks.test_props" name="test_p6_symmetry[y--0.11]" time="0.253"><failure message="AssertionError: {'violations': 1, 'face_points': 2244}&#10;assert 1 == 0">face = 'y-', d = 0.11
+
+    @pytest.mark.parametrize("d", Pr.P6_DELTAS)
+    @pytest.mark.parametrize("face", list(H.FACES))
+    def test_p6_symmetry(face, d):
+        r = Pr.p6_symmetry(IMPL, N, SEED, face, d)
+&gt;       assert r["violations"] == 0, r
+E       AssertionError: {'violations': 1, 'face_points': 2244}
+E       assert 1 == 0
+
+checks/test_props.py:64: AssertionError</failure></testcase><testcase classname="checks.test_props" name="test_p6_symmetry[y--0.12]" time="0.252"><failure message="AssertionError: {'violations': 1, 'face_points': 2244}&#10;assert 1 == 0">face = 'y-', d = 0.12
+
+    @pytest.mark.parametrize("d", Pr.P6_DELTAS)
+    @pytest.mark.parametrize("face", list(H.FACES))
+    def test_p6_symmetry(face, d):
+        r = Pr.p6_symmetry(IMPL, N, SEED, face, d)
+&gt;       assert r["violations"] == 0, r
+E       AssertionError: {'violations': 1, 'face_points': 2244}
+E       assert 1 == 0
+
+checks/test_props.py:64: AssertionError</failure></testcase><testcase classname="checks.test_props" name="test_p6_symmetry[y+-0.02]" time="0.252" /><testcase classname="checks.test_props" name="test_p6_symmetry[y+-0.09]" time="0.253"><failure message="AssertionError: {'violations': 1, 'face_points': 2265}&#10;assert 1 == 0">face = 'y+', d = 0.09
+
+    @pytest.mark.parametrize("d", Pr.P6_DELTAS)
+    @pytest.mark.parametrize("face", list(H.FACES))
+    def test_p6_symmetry(face, d):
+        r = Pr.p6_symmetry(IMPL, N, SEED, face, d)
+&gt;       assert r["violations"] == 0, r
+E       AssertionError: {'violations': 1, 'face_points': 2265}
+E       assert 1 == 0
+
+checks/test_props.py:64: AssertionError</failure></testcase><testcase classname="checks.test_props" name="test_p6_symmetry[y+-0.0999]" time="0.253"><failure message="AssertionError: {'violations': 1, 'face_points': 2265}&#10;assert 1 == 0">face = 'y+', d = 0.0999
+
+    @pytest.mark.parametrize("d", Pr.P6_DELTAS)
+    @pytest.mark.parametrize("face", list(H.FACES))
+    def test_p6_symmetry(face, d):
+        r = Pr.p6_symmetry(IMPL, N, SEED, face, d)
+&gt;       assert r["violations"] == 0, r
+E       AssertionError: {'violations': 1, 'face_points': 2265}
+E       assert 1 == 0
+
+checks/test_props.py:64: AssertionError</failure></testcase><testcase classname="checks.test_props" name="test_p6_symmetry[y+-0.1001]" time="0.253"><failure message="AssertionError: {'violations': 1, 'face_points': 2265}&#10;assert 1 == 0">face = 'y+', d = 0.1001
+
+    @pytest.mark.parametrize("d", Pr.P6_DELTAS)
+    @pytest.mark.parametrize("face", list(H.FACES))
+    def test_p6_symmetry(face, d):
+        r = Pr.p6_symmetry(IMPL, N, SEED, face, d)
+&gt;       assert r["violations"] == 0, r
+E       AssertionError: {'violations': 1, 'face_points': 2265}
+E       assert 1 == 0
+
+checks/test_props.py:64: AssertionError</failure></testcase><testcase classname="checks.test_props" name="test_p6_symmetry[y+-0.11]" time="0.252"><failure message="AssertionError: {'violations': 1, 'face_points': 2265}&#10;assert 1 == 0">face = 'y+', d = 0.11
+
+    @pytest.mark.parametrize("d", Pr.P6_DELTAS)
+    @pytest.mark.parametrize("face", list(H.FACES))
+    def test_p6_symmetry(face, d):
+        r = Pr.p6_symmetry(IMPL, N, SEED, face, d)
+&gt;       assert r["violations"] == 0, r
+E       AssertionError: {'violations': 1, 'face_points': 2265}
+E       assert 1 == 0
+
+checks/test_props.py:64: AssertionError</failure></testcase><testcase classname="checks.test_props" name="test_p6_symmetry[y+-0.12]" time="0.253"><failure message="AssertionError: {'violations': 1, 'face_points': 2265}&#10;assert 1 == 0">face = 'y+', d = 0.12
+
+    @pytest.mark.parametrize("d", Pr.P6_DELTAS)
+    @pytest.mark.parametrize("face", list(H.FACES))
+    def test_p6_symmetry(face, d):
+        r = Pr.p6_symmetry(IMPL, N, SEED, face, d)
+&gt;       assert r["violations"] == 0, r
+E       AssertionError: {'violations': 1, 'face_points': 2265}
+E       assert 1 == 0
+
+checks/test_props.py:64: AssertionError</failure></testcase><testcase classname="checks.test_props" name="test_p6_symmetry[z--0.02]" time="0.252" /><testcase classname="checks.test_props" name="test_p6_symmetry[z--0.09]" time="0.254"><failure message="AssertionError: {'violations': 8, 'face_points': 6356}&#10;assert 8 == 0">face = 'z-', d = 0.09
+
+    @pytest.mark.parametrize("d", Pr.P6_DELTAS)
+    @pytest.mark.parametrize("face", list(H.FACES))
+    def test_p6_symmetry(face, d):
+        r = Pr.p6_symmetry(IMPL, N, SEED, face, d)
+&gt;       assert r["violations"] == 0, r
+E       AssertionError: {'violations': 8, 'face_points': 6356}
+E       assert 8 == 0
+
+checks/test_props.py:64: AssertionError</failure></testcase><testcase classname="checks.test_props" name="test_p6_symmetry[z--0.0999]" time="0.254"><failure message="AssertionError: {'violations': 8, 'face_points': 6356}&#10;assert 8 == 0">face = 'z-', d = 0.0999
+
+    @pytest.mark.parametrize("d", Pr.P6_DELTAS)
+    @pytest.mark.parametrize("face", list(H.FACES))
+    def test_p6_symmetry(face, d):
+        r = Pr.p6_symmetry(IMPL, N, SEED, face, d)
+&gt;       assert r["violations"] == 0, r
+E       AssertionError: {'violations': 8, 'face_points': 6356}
+E       assert 8 == 0
+
+checks/test_props.py:64: AssertionError</failure></testcase><testcase classname="checks.test_props" name="test_p6_symmetry[z--0.1001]" time="0.255"><failure message="AssertionError: {'violations': 16, 'face_points': 6356}&#10;assert 16 == 0">face = 'z-', d = 0.1001
+
+    @pytest.mark.parametrize("d", Pr.P6_DELTAS)
+    @pytest.mark.parametrize("face", list(H.FACES))
+    def test_p6_symmetry(face, d):
+        r = Pr.p6_symmetry(IMPL, N, SEED, face, d)
+&gt;       assert r["violations"] == 0, r
+E       AssertionError: {'violations': 16, 'face_points': 6356}
+E       assert 16 == 0
+
+checks/test_props.py:64: AssertionError</failure></testcase><testcase classname="checks.test_props" name="test_p6_symmetry[z--0.11]" time="0.254"><failure message="AssertionError: {'violations': 16, 'face_points': 6356}&#10;assert 16 == 0">face = 'z-', d = 0.11
+
+    @pytest.mark.parametrize("d", Pr.P6_DELTAS)
+    @pytest.mark.parametrize("face", list(H.FACES))
+    def test_p6_symmetry(face, d):
+        r = Pr.p6_symmetry(IMPL, N, SEED, face, d)
+&gt;       assert r["violations"] == 0, r
+E       AssertionError: {'violations': 16, 'face_points': 6356}
+E       assert 16 == 0
+
+checks/test_props.py:64: AssertionError</failure></testcase><testcase classname="checks.test_props" name="test_p6_symmetry[z--0.12]" time="0.255"><failure message="AssertionError: {'violations': 16, 'face_points': 6356}&#10;assert 16 == 0">face = 'z-', d = 0.12
+
+    @pytest.mark.parametrize("d", Pr.P6_DELTAS)
+    @pytest.mark.parametrize("face", list(H.FACES))
+    def test_p6_symmetry(face, d):
+        r = Pr.p6_symmetry(IMPL, N, SEED, face, d)
+&gt;       assert r["violations"] == 0, r
+E       AssertionError: {'violations': 16, 'face_points': 6356}
+E       assert 16 == 0
+
+checks/test_props.py:64: AssertionError</failure></testcase><testcase classname="checks.test_props" name="test_p6_symmetry[z+-0.02]" time="0.253" /><testcase classname="checks.test_props" name="test_p6_symmetry[z+-0.09]" time="0.254"><failure message="AssertionError: {'violations': 13, 'face_points': 6582}&#10;assert 13 == 0">face = 'z+', d = 0.09
+
+    @pytest.mark.parametrize("d", Pr.P6_DELTAS)
+    @pytest.mark.parametrize("face", list(H.FACES))
+    def test_p6_symmetry(face, d):
+        r = Pr.p6_symmetry(IMPL, N, SEED, face, d)
+&gt;       assert r["violations"] == 0, r
+E       AssertionError: {'violations': 13, 'face_points': 6582}
+E       assert 13 == 0
+
+checks/test_props.py:64: AssertionError</failure></testcase><testcase classname="checks.test_props" name="test_p6_symmetry[z+-0.0999]" time="0.254"><failure message="AssertionError: {'violations': 13, 'face_points': 6582}&#10;assert 13 == 0">face = 'z+', d = 0.0999
+
+    @pytest.mark.parametrize("d", Pr.P6_DELTAS)
+    @pytest.mark.parametrize("face", list(H.FACES))
+    def test_p6_symmetry(face, d):
+        r = Pr.p6_symmetry(IMPL, N, SEED, face, d)
+&gt;       assert r["violations"] == 0, r
+E       AssertionError: {'violations': 13, 'face_points': 6582}
+E       assert 13 == 0
+
+checks/test_props.py:64: AssertionError</failure></testcase><testcase classname="checks.test_props" name="test_p6_symmetry[z+-0.1001]" time="0.255"><failure message="AssertionError: {'violations': 26, 'face_points': 6582}&#10;assert 26 == 0">face = 'z+', d = 0.1001
+
+    @pytest.mark.parametrize("d", Pr.P6_DELTAS)
+    @pytest.mark.parametrize("face", list(H.FACES))
+    def test_p6_symmetry(face, d):
+        r = Pr.p6_symmetry(IMPL, N, SEED, face, d)
+&gt;       assert r["violations"] == 0, r
+E       AssertionError: {'violations': 26, 'face_points': 6582}
+E       assert 26 == 0
+
+checks/test_props.py:64: AssertionError</failure></testcase><testcase classname="checks.test_props" name="test_p6_symmetry[z+-0.11]" time="0.255"><failure message="AssertionError: {'violations': 26, 'face_points': 6582}&#10;assert 26 == 0">face = 'z+', d = 0.11
+
+    @pytest.mark.parametrize("d", Pr.P6_DELTAS)
+    @pytest.mark.parametrize("face", list(H.FACES))
+    def test_p6_symmetry(face, d):
+        r = Pr.p6_symmetry(IMPL, N, SEED, face, d)
+&gt;       assert r["violations"] == 0, r
+E       AssertionError: {'violations': 26, 'face_points': 6582}
+E       assert 26 == 0
+
+checks/test_props.py:64: AssertionError</failure></testcase><testcase classname="checks.test_props" name="test_p6_symmetry[z+-0.12]" time="0.255"><failure message="AssertionError: {'violations': 26, 'face_points': 6582}&#10;assert 26 == 0">face = 'z+', d = 0.12
+
+    @pytest.mark.parametrize("d", Pr.P6_DELTAS)
+    @pytest.mark.parametrize("face", list(H.FACES))
+    def test_p6_symmetry(face, d):
+        r = Pr.p6_symmetry(IMPL, N, SEED, face, d)
+&gt;       assert r["violations"] == 0, r
+E       AssertionError: {'violations': 26, 'face_points': 6582}
+E       assert 26 == 0
+
+checks/test_props.py:64: AssertionError</failure></testcase><testcase classname="checks.test_props" name="test_p7_sweep[flat-horiz]" time="5.348" /><testcase classname="checks.test_props" name="test_p7_sweep[ball-horiz]" time="0.167" /><testcase classname="checks.test_props" name="test_p7_sweep[flat-vert]" time="0.102" /><testcase classname="checks.test_props" name="test_p7_sweep[ball-vert]" time="0.108" /><testcase classname="checks.test_props" name="test_p7_sweep[flat-incl]" time="3.957" /><testcase classname="checks.test_props" name="test_p7_sweep[ball-incl]" time="4.982" /><testcase classname="checks.test_props" name="test_p8_slot[depth-0.0]" time="0.000"><skipped type="pytest.skip" message="P8 — только 21a0d91 (точки на настоящей поверхности паза)">/home/jovyan/users/slavin/AI4Science/task/checks/test_props.py:73: P8 — только 21a0d91 (точки на настоящей поверхности паза)</skipped></testcase><testcase classname="checks.test_props" name="test_p8_slot[depth-0.02]" time="0.000"><skipped type="pytest.skip" message="P8 — только 21a0d91 (точки на настоящей поверхности паза)">/home/jovyan/users/slavin/AI4Science/task/checks/test_props.py:73: P8 — только 21a0d91 (точки на настоящей поверхности паза)</skipped></testcase><testcase classname="checks.test_props" name="test_p8_slot[depth-0.05]" time="0.000"><skipped type="pytest.skip" message="P8 — только 21a0d91 (точки на настоящей поверхности паза)">/home/jovyan/users/slavin/AI4Science/task/checks/test_props.py:73: P8 — только 21a0d91 (точки на настоящей поверхности паза)</skipped></testcase><testcase classname="checks.test_props" name="test_p8_slot[depth-0.09]" time="0.000"><skipped type="pytest.skip" message="P8 — только 21a0d91 (точки на настоящей поверхности паза)">/home/jovyan/users/slavin/AI4Science/task/checks/test_props.py:73: P8 — только 21a0d91 (точки на настоящей поверхности паза)</skipped></testcase><testcase classname="checks.test_props" name="test_p8_slot[depth-0.0999]" time="0.000"><skipped type="pytest.skip" message="P8 — только 21a0d91 (точки на настоящей поверхности паза)">/home/jovyan/users/slavin/AI4Science/task/checks/test_props.py:73: P8 — только 21a0d91 (точки на настоящей поверхности паза)</skipped></testcase><testcase classname="checks.test_props" name="test_p8_slot[depth-0.1]" time="0.000"><skipped type="pytest.skip" message="P8 — только 21a0d91 (точки на настоящей поверхности паза)">/home/jovyan/users/slavin/AI4Science/task/checks/test_props.py:73: P8 — только 21a0d91 (точки на настоящей поверхности паза)</skipped></testcase><testcase classname="checks.test_props" name="test_p8_slot[depth-0.1001]" time="0.000"><skipped type="pytest.skip" message="P8 — только 21a0d91 (точки на настоящей поверхности паза)">/home/jovyan/users/slavin/AI4Science/task/checks/test_props.py:73: P8 — только 21a0d91 (точки на настоящей поверхности паза)</skipped></testcase><testcase classname="checks.test_props" name="test_p8_slot[depth-0.11]" time="0.002"><skipped type="pytest.skip" message="P8 — только 21a0d91 (точки на настоящей поверхности паза)">/home/jovyan/users/slavin/AI4Science/task/checks/test_props.py:73: P8 — только 21a0d91 (точки на настоящей поверхности паза)</skipped></testcase><testcase classname="checks.test_props" name="test_p8_slot[depth-0.12]" time="0.000"><skipped type="pytest.skip" message="P8 — только 21a0d91 (точки на настоящей поверхности паза)">/home/jovyan/users/slavin/AI4Science/task/checks/test_props.py:73: P8 — только 21a0d91 (точки на настоящей поверхности паза)</skipped></testcase><testcase classname="checks.test_props" name="test_p8_slot[depth-0.15]" time="0.000"><skipped type="pytest.skip" message="P8 — только 21a0d91 (точки на настоящей поверхности паза)">/home/jovyan/users/slavin/AI4Science/task/checks/test_props.py:73: P8 — только 21a0d91 (точки на настоящей поверхности паза)</skipped></testcase><testcase classname="checks.test_props" name="test_p8_slot[depth-0.3]" time="0.000"><skipped type="pytest.skip" message="P8 — только 21a0d91 (точки на настоящей поверхности паза)">/home/jovyan/users/slavin/AI4Science/task/checks/test_props.py:73: P8 — только 21a0d91 (точки на настоящей поверхности паза)</skipped></testcase><testcase classname="checks.test_props" name="test_p8_slot[radius-0.02]" time="0.000"><skipped type="pytest.skip" message="P8 — только 21a0d91 (точки на настоящей поверхности паза)">/home/jovyan/users/slavin/AI4Science/task/checks/test_props.py:73: P8 — только 21a0d91 (точки на настоящей поверхности паза)</skipped></testcase><testcase classname="checks.test_props" name="test_p8_slot[radius-0.05]" time="0.000"><skipped type="pytest.skip" message="P8 — только 21a0d91 (точки на настоящей поверхности паза)">/home/jovyan/users/slavin/AI4Science/task/checks/test_props.py:73: P8 — только 21a0d91 (точки на настоящей поверхности паза)</skipped></testcase><testcase classname="checks.test_props" name="test_p8_slot[radius-0.09]" time="0.000"><skipped type="pytest.skip" message="P8 — только 21a0d91 (точки на настоящей поверхности паза)">/home/jovyan/users/slavin/AI4Science/task/checks/test_props.py:73: P8 — только 21a0d91 (точки на настоящей поверхности паза)</skipped></testcase><testcase classname="checks.test_props" name="test_p8_slot[radius-0.0999]" time="0.000"><skipped type="pytest.skip" message="P8 — только 21a0d91 (точки на настоящей поверхности паза)">/home/jovyan/users/slavin/AI4Science/task/checks/test_props.py:73: P8 — только 21a0d91 (точки на настоящей поверхности паза)</skipped></testcase><testcase classname="checks.test_props" name="test_p8_slot[radius-0.1]" time="0.000"><skipped type="pytest.skip" message="P8 — только 21a0d91 (точки на настоящей поверхности паза)">/home/jovyan/users/slavin/AI4Science/task/checks/test_props.py:73: P8 — только 21a0d91 (точки на настоящей поверхности паза)</skipped></testcase><testcase classname="checks.test_props" name="test_p8_slot[radius-0.1001]" time="0.000"><skipped type="pytest.skip" message="P8 — только 21a0d91 (точки на настоящей поверхности паза)">/home/jovyan/users/slavin/AI4Science/task/checks/test_props.py:73: P8 — только 21a0d91 (точки на настоящей поверхности паза)</skipped></testcase><testcase classname="checks.test_props" name="test_p8_slot[radius-0.11]" time="0.000"><skipped type="pytest.skip" message="P8 — только 21a0d91 (точки на настоящей поверхности паза)">/home/jovyan/users/slavin/AI4Science/task/checks/test_props.py:73: P8 — только 21a0d91 (точки на настоящей поверхности паза)</skipped></testcase><testcase classname="checks.test_props" name="test_p8_slot[radius-0.12]" time="0.000"><skipped type="pytest.skip" message="P8 — только 21a0d91 (точки на настоящей поверхности паза)">/home/jovyan/users/slavin/AI4Science/task/checks/test_props.py:73: P8 — только 21a0d91 (точки на настоящей поверхности паза)</skipped></testcase><testcase classname="checks.test_props" name="test_p8_slot[radius-0.15]" time="0.000"><skipped type="pytest.skip" message="P8 — только 21a0d91 (точки на настоящей поверхности паза)">/home/jovyan/users/slavin/AI4Science/task/checks/test_props.py:73: P8 — только 21a0d91 (точки на настоящей поверхности паза)</skipped></testcase><testcase classname="checks.test_props" name="test_p8_slot[radius-0.3]" time="0.000"><skipped type="pytest.skip" message="P8 — только 21a0d91 (точки на настоящей поверхности паза)">/home/jovyan/users/slavin/AI4Science/task/checks/test_props.py:73: P8 — только 21a0d91 (точки на настоящей поверхности паза)</skipped></testcase><testcase classname="checks.test_sensitivity" name="test_mutant_is_caught[P1-phase]" time="0.000"><skipped type="pytest.skip" message="мутанты проверяются на проверяемом снимке 21a0d91">/home/jovyan/users/slavin/AI4Science/task/checks/test_sensitivity.py:28: мутанты проверяются на проверяемом снимке 21a0d91</skipped></testcase><testcase classname="checks.test_sensitivity" name="test_mutant_is_caught[P1-grow]" time="0.000"><skipped type="pytest.skip" message="мутанты проверяются на проверяемом снимке 21a0d91">/home/jovyan/users/slavin/AI4Science/task/checks/test_sensitivity.py:28: мутанты проверяются на проверяемом снимке 21a0d91</skipped></testcase><testcase classname="checks.test_sensitivity" name="test_mutant_is_caught[P1-normals]" time="0.000"><skipped type="pytest.skip" message="мутанты проверяются на проверяемом снимке 21a0d91">/home/jovyan/users/slavin/AI4Science/task/checks/test_sensitivity.py:28: мутанты проверяются на проверяемом снимке 21a0d91</skipped></testcase><testcase classname="checks.test_sensitivity" name="test_mutant_is_caught[P2-tol]" time="0.000"><skipped type="pytest.skip" message="мутанты проверяются на проверяемом снимке 21a0d91">/home/jovyan/users/slavin/AI4Science/task/checks/test_sensitivity.py:28: мутанты проверяются на проверяемом снимке 21a0d91</skipped></testcase><testcase classname="checks.test_sensitivity" name="test_mutant_is_caught[P2-grow]" time="0.000"><skipped type="pytest.skip" message="мутанты проверяются на проверяемом снимке 21a0d91">/home/jovyan/users/slavin/AI4Science/task/checks/test_sensitivity.py:28: мутанты проверяются на проверяемом снимке 21a0d91</skipped></testcase><testcase classname="checks.test_sensitivity" name="test_mutant_is_caught[P2-unordered]" time="0.000"><skipped type="pytest.skip" message="мутанты проверяются на проверяемом снимке 21a0d91">/home/jovyan/users/slavin/AI4Science/task/checks/test_sensitivity.py:28: мутанты проверяются на проверяемом снимке 21a0d91</skipped></testcase><testcase classname="checks.test_sensitivity" name="test_mutant_is_caught[P3-unordered]" time="0.000"><skipped type="pytest.skip" message="мутанты проверяются на проверяемом снимке 21a0d91">/home/jovyan/users/slavin/AI4Science/task/checks/test_sensitivity.py:28: мутанты проверяются на проверяемом снимке 21a0d91</skipped></testcase><testcase classname="checks.test_sensitivity" name="test_mutant_is_caught[P4-strict]" time="0.000"><skipped type="pytest.skip" message="мутанты проверяются на проверяемом снимке 21a0d91">/home/jovyan/users/slavin/AI4Science/task/checks/test_sensitivity.py:28: мутанты проверяются на проверяемом снимке 21a0d91</skipped></testcase><testcase classname="checks.test_sensitivity" name="test_mutant_is_caught[P5-phase]" time="0.000"><skipped type="pytest.skip" message="мутанты проверяются на проверяемом снимке 21a0d91">/home/jovyan/users/slavin/AI4Science/task/checks/test_sensitivity.py:28: мутанты проверяются на проверяемом снимке 21a0d91</skipped></testcase><testcase classname="checks.test_sensitivity" name="test_mutant_is_caught[P5-unordered]" time="0.000"><skipped type="pytest.skip" message="мутанты проверяются на проверяемом снимке 21a0d91">/home/jovyan/users/slavin/AI4Science/task/checks/test_sensitivity.py:28: мутанты проверяются на проверяемом снимке 21a0d91</skipped></testcase><testcase classname="checks.test_sensitivity" name="test_mutant_is_caught[P6-grow]" time="0.000"><skipped type="pytest.skip" message="мутанты проверяются на проверяемом снимке 21a0d91">/home/jovyan/users/slavin/AI4Science/task/checks/test_sensitivity.py:28: мутанты проверяются на проверяемом снимке 21a0d91</skipped></testcase><testcase classname="checks.test_sensitivity" name="test_mutant_is_caught[P7-radius]" time="0.000"><skipped type="pytest.skip" message="мутанты проверяются на проверяемом снимке 21a0d91">/home/jovyan/users/slavin/AI4Science/task/checks/test_sensitivity.py:28: мутанты проверяются на проверяемом снимке 21a0d91</skipped></testcase><testcase classname="checks.test_sensitivity" name="test_mutant_is_caught[P8-tol]" time="0.000"><skipped type="pytest.skip" message="мутанты проверяются на проверяемом снимке 21a0d91">/home/jovyan/users/slavin/AI4Science/task/checks/test_sensitivity.py:28: мутанты проверяются на проверяемом снимке 21a0d91</skipped></testcase><testcase classname="checks.test_sensitivity" name="test_mutant_is_caught[P8-radius]" time="0.000"><skipped type="pytest.skip" message="мутанты проверяются на проверяемом снимке 21a0d91">/home/jovyan/users/slavin/AI4Science/task/checks/test_sensitivity.py:28: мутанты проверяются на проверяемом снимке 21a0d91</skipped></testcase><testcase classname="checks.test_sensitivity" name="test_every_property_has_a_mutant" time="0.000" /></testsuite></testsuites>
