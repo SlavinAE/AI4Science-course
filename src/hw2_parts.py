@@ -140,9 +140,11 @@ class Slot:
     def inside(self, P: np.ndarray) -> np.ndarray:
         return in_block(P) & ~self.removed(P)
 
-    def band(self, P: np.ndarray) -> np.ndarray:
-        """Точки цели у боковой границы заметённого тела (там аналитика и exact могут разойтись в последнем знаке)."""
-        return np.abs(seg_dist(P, SLOT_A, SLOT_B) - self.R) < EPS
+    def band(self, P: np.ndarray, N: np.ndarray) -> np.ndarray:
+        """Точки цели, чья проба идёт вдоль боковой границы заметённого тела: нормаль вертикальна, XY-расстояние до оси
+        хода в пределах EPS от R (там аналитика и exact могут разойтись в последнем знаке). У стенок паза проба уходит
+        от границы, их неоднозначность ловит полоса по лучу."""
+        return (np.abs(N[:, 2]) > 0.5) & (np.abs(seg_dist(P, SLOT_A, SLOT_B) - self.R) < EPS)
 
 
 def slot_areas() -> list[tuple[str, float]]:

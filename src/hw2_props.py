@@ -138,4 +138,4 @@ def p8_slot(impl, n, seed, variant, d, mut=None) -> dict:
     s = H.slot_samples(n, seed)
     r = H.metric(impl, wp.inside, n, seed, samples=s, tol=TOL_MUT if mut == "tol" else H.TOL)
     r = _post(r, mut, seed, variant, d)
-    return _verdict_vs_truth(r, truth.inside, truth.band(r["P"]))
+    return _verdict_vs_truth(r, truth.inside, truth.band(r["P"], r["N"]))
