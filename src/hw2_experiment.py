@@ -26,7 +26,7 @@ import hw2_props as Pr  # noqa: E402
 
 RESULTS = H.ROOT / "results"
 NEW, OLD = "21a0d91", "13d20b5"
-EXPECTED_OLD_FAIL = {"p2", "p4", "p5"}  # METHOD.md, правило принятия, п. 3
+EXPECTED_OLD_FAIL = {"p2", "p4", "p5", "p6"}  # METHOD.md, правило принятия, п. 3; P6 — Поправка 4
 
 
 def write(step: str, data: dict, lines: list[str]) -> None:
