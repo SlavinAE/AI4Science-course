@@ -21,7 +21,7 @@
 ## Проверка (ДЗ 2)
 - Верификатор метрики — свойства P1–P8 и мутанты в `checks/`, методика — `METHOD.md`. Одна команда:
   `.venv/bin/python -m pytest checks -q` (снимок — `METRIC_IMPL=21a0d91|13d20b5`, по умолчанию 21a0d91).
-- Шаги эксперимента: `.venv/bin/python src/hw2_experiment.py dry|smoke` — только из закоммиченного кода,
+- Шаги эксперимента: `.venv/bin/python src/hw2_experiment.py dry|smoke|sweep|full` — только из закоммиченного кода,
   результаты — `results/hw2_*`.
 - `checks/` и `METHOD.md` не менять, чтобы тест прошёл; изменение методики — только новым разделом «Поправка N».
 

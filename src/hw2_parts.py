@@ -28,7 +28,12 @@ IMPLS = {"21a0d91": "camverify_21a0d91", "13d20b5": "camverify"}
 SUMS = {"21a0d91": "SHA256SUMS_21a0d91", "13d20b5": "SHA256SUMS"}
 LO, HI = np.zeros(3), np.array([100.0, 60.0, 20.0])
 FACES = {"x-": (0, 0), "x+": (0, 1), "y-": (1, 0), "y+": (1, 1), "z-": (2, 0), "z+": (2, 1)}
+FACE_AREA = {"x-": 1200.0, "x+": 1200.0, "y-": 2000.0, "y+": 2000.0, "z-": 6000.0, "z+": 6000.0}
+BOX_AREA = 18400.0
 DELTAS = (0.02, 0.05, 0.09, 0.0999, 0.1, 0.1001, 0.11, 0.12, 0.15, 0.3)
+FULL_DELTAS = (0.05, 0.09, 0.11, 0.12, 0.15)
+FULL_SEEDS = tuple(range(10))
+FULL_N = 600_000
 
 
 def impl_default() -> str:
@@ -145,6 +150,26 @@ class Slot:
         хода в пределах EPS от R (там аналитика и exact могут разойтись в последнем знаке). У стенок паза проба уходит
         от границы, их неоднозначность ловит полоса по лучу."""
         return (np.abs(N[:, 2]) > 0.5) & (np.abs(seg_dist(P, SLOT_A, SLOT_B) - self.R) < EPS)
+
+
+def true_within_d1(face: str, d: float) -> float:
+    """Аналитическая доля поверхности блока в допуске, %: сдвинутая грань вне допуска при |δ| ≥ tol."""
+    return 100.0 if abs(d) < TOL else 100.0 * (1.0 - FACE_AREA[face] / BOX_AREA)
+
+
+def slot_total_area() -> float:
+    return float(sum(a for _, a in slot_areas()))
+
+
+def true_within_d3_depth(d: float) -> float:
+    """Доля поверхности цели D3 в допуске, %: дно паза с зарезом δ (кончик на 18 − δ)."""
+    ast = 2 * SLOT_R * (SLOT_B[0] - SLOT_A[0]) + math.pi * SLOT_R * SLOT_R
+    return 100.0 if abs(d) < TOL else 100.0 * (1.0 - ast / slot_total_area())
+
+
+def n_eff(w: np.ndarray) -> float:
+    w = np.asarray(w, float)
+    return float((w.sum() ** 2) / np.square(w).sum())
 
 
 def slot_areas() -> list[tuple[str, float]]:
