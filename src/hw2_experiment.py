@@ -198,7 +198,7 @@ def sweep(prov: dict) -> tuple[dict, list[str], bool]:
 
 # ------------------------------------------------------------------------------------------- полный расчёт
 VARIANTS = ((f"{NEW}", NEW, H.CELL), (f"{OLD} cell=0.05", OLD, H.CELL), (f"{OLD} cell=0", OLD, 0.0))
-RATIO_LO, RATIO_HI, THRESH = 0.55, 1.45, 0.1
+RATIO_LO, RATIO_HI, THRESH = 0.74, 1.26, 0.1  # χ²_29, 95 %; Поправка 6
 
 
 def _summ(xs: list[float]) -> dict:
@@ -216,7 +216,8 @@ def _one_d1(impl: str, face: str, d: float, seed: int, cell: float) -> dict:
     ne = H.n_eff(r["w"])
     unrounded = 100.0 * float(r["w"][r["within"]].sum() / r["w"].sum())
     return {"within_pct": r["stats"]["surface_within_tol_pct"], "within_unrounded": unrounded,
-            "delta_pp": r["stats"]["surface_within_tol_pct"] - true, "true_pct": true, "n_eff": ne,
+            "delta_pp": r["stats"]["surface_within_tol_pct"] - true,
+            "delta_unrounded": unrounded - true, "true_pct": true, "n_eff": ne,
             "sigma_binom": 100.0 * math.sqrt(max(true / 100.0 * (1.0 - true / 100.0), 0.0) / ne)}
 
 
@@ -227,7 +228,8 @@ def _one_d3(seed: int, d: float) -> dict:
     ne = H.n_eff(r["w"])
     unrounded = 100.0 * float(r["w"][r["within"]].sum() / r["w"].sum())
     return {"within_pct": r["stats"]["surface_within_tol_pct"], "within_unrounded": unrounded,
-            "delta_pp": r["stats"]["surface_within_tol_pct"] - true, "true_pct": true, "n_eff": ne,
+            "delta_pp": r["stats"]["surface_within_tol_pct"] - true,
+            "delta_unrounded": unrounded - true, "true_pct": true, "n_eff": ne,
             "sigma_binom": 100.0 * math.sqrt(max(true / 100.0 * (1.0 - true / 100.0), 0.0) / ne)}
 
 
@@ -270,10 +272,11 @@ def full(prov: dict) -> tuple[dict, list[str], bool]:
                     if meta is None:
                         meta = {"true_pct": one["true_pct"], "n_eff": one["n_eff"], "sigma_binom": one["sigma_binom"]}
             row = {"part": "D1", "face": face, "delta_mm": d, **meta,
-                   "new": _summ([x["delta_pp"] for x in per[f"{NEW}"]]),
-                   "old_cell05": _summ([x["delta_pp"] for x in per[f"{OLD} cell=0.05"]]),
-                   "old_cell0": _summ([x["delta_pp"] for x in per[f"{OLD} cell=0"]]),
-                   "per_seed": {name: [x["delta_pp"] for x in xs] for name, xs in per.items()}}
+                   "new": _summ([x["delta_unrounded"] for x in per[f"{NEW}"]]),
+                   "new_rounded": _summ([x["delta_pp"] for x in per[f"{NEW}"]]),
+                   "old_cell05": _summ([x["delta_unrounded"] for x in per[f"{OLD} cell=0.05"]]),
+                   "old_cell0": _summ([x["delta_unrounded"] for x in per[f"{OLD} cell=0"]]),
+                   "per_seed": {name: [x["delta_unrounded"] for x in xs] for name, xs in per.items()}}
             ok, why = _case_ok(row)
             row["rule4_5_ok"], row["rule4_5"] = ok, why
             d1.append(row)
@@ -281,8 +284,9 @@ def full(prov: dict) -> tuple[dict, list[str], bool]:
         xs = [_one_d3(seed, d) for seed in H.FULL_SEEDS]
         row = {"part": "D3", "face": "floor", "delta_mm": d, "true_pct": xs[0]["true_pct"],
                "n_eff": xs[0]["n_eff"], "sigma_binom": xs[0]["sigma_binom"],
-               "new": _summ([x["delta_pp"] for x in xs]),
-               "per_seed": {f"{NEW}": [x["delta_pp"] for x in xs]}}
+               "new": _summ([x["delta_unrounded"] for x in xs]),
+               "new_rounded": _summ([x["delta_pp"] for x in xs]),
+               "per_seed": {f"{NEW}": [x["delta_unrounded"] for x in xs]}}
         ok, why = _case_ok(row)
         row["rule4_5_ok"], row["rule4_5"] = ok, why
         d3.append(row)
