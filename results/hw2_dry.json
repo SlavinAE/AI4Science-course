@@ -1,7 +1,7 @@
 {
  "step": "dry",
  "provenance": {
-  "commit": "30fbacbdc587f82e343a1642d85d0378f210a43d",
+  "commit": "b1726d1c03627ba18f47932f7d30074474d7c3c1",
   "dirty": false,
   "dirty_files": [],
   "snapshots": {
@@ -94,7 +94,7 @@
  "exact_compile": {
   "p8_depth0": {
    "violations": 0,
-   "band": 141,
+   "band": 0,
    "points": 10000,
    "truth_out": 0,
    "metric_out": 0,
@@ -108,12 +108,12 @@
   }
  },
  "seconds": {
-  "import_s": 0.23,
-  "metric 21a0d91_s": 0.01,
-  "metric 13d20b5 cell=0.05_s": 0.05,
+  "import_s": 0.18,
+  "metric 21a0d91_s": 0.0,
+  "metric 13d20b5 cell=0.05_s": 0.04,
   "metric 13d20b5 cell=0_s": 0.01,
   "p1_s": 0.0,
-  "exact_first_calls_s": 5.66
+  "exact_first_calls_s": 0.72
  },
  "passed": true
 }
