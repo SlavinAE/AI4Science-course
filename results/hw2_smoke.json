@@ -1,7 +1,7 @@
 {
  "step": "smoke",
  "provenance": {
-  "commit": "f29a95a6dbc46d8aff3924465b21e999fca0d5a7",
+  "commit": "015434d6213268492a58d65380048866e4f0a901",
   "dirty": false,
   "dirty_files": [],
   "snapshots": {
@@ -48,15 +48,13 @@
  },
  "runs": {
   "21a0d91": {
-   "exit": 1,
+   "exit": 0,
    "tests": 408,
-   "failures": 1,
+   "failures": 0,
    "errors": 0,
    "skipped": 0,
-   "failed_props": [
-    "test_mutant_is_caught"
-   ],
-   "seconds": 85.3
+   "failed_props": [],
+   "seconds": 79.1
   },
   "13d20b5": {
    "exit": 1,
@@ -70,8 +68,8 @@
     "p5",
     "p6"
    ],
-   "seconds": 135.9
+   "seconds": 131.7
   }
  },
- "passed": false
+ "passed": true
 }
