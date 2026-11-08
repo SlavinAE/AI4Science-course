@@ -1,0 +1,119 @@
+{
+ "step": "dry",
+ "provenance": {
+  "commit": "30fbacbdc587f82e343a1642d85d0378f210a43d",
+  "dirty": false,
+  "dirty_files": [],
+  "snapshots": {
+   "21a0d91": {
+    "folder": "vendor/camverify_21a0d91",
+    "sums": "vendor/SHA256SUMS_21a0d91",
+    "ok": true,
+    "files": {
+     "exact.py": "af594d33f35bcd76f9c5cc35bff99aff45f4ad29165c40447200da4862ac33d0",
+     "verify.py": "3b5da518f7be2bbd9c7c5f2289caff8d0505dc696645528ac5713996df0107c6",
+     "gcode.py": "85c697ddb3972a9081ed7b710ed9887ea2142e2033c973002a57c1e8049f46a3",
+     "dexel.py": "fd3e11b354c4de6d1d4af1fa2611dc6b10c59de58344cca9ada50d463c241985",
+     "raster.py": "c7b61935fecb076f9a26c3b7af6811acb28fba8507fa2cc55ac43ea97cc3adbc",
+     "voxel.py": "2a06116ea3236692d3329cbd911be0f103b8d07bfae4ce0bb6715a23f5e2341b",
+     "cpu_fast.py": "2ea81862ad368e0e6678a343ce6d3e36a35d48d135535b3c99bc45f5aff29ae7"
+    }
+   },
+   "13d20b5": {
+    "folder": "vendor/camverify",
+    "sums": "vendor/SHA256SUMS",
+    "ok": true,
+    "files": {
+     "dexel.py": "381afdf114a728bd743b5757800d52ea77625bca86cf317021b40fab339fb8a5",
+     "verify.py": "6428e7c0b2776dd58ab8230cfb4137e2596556045ad19e7fd813678b425c2c0b",
+     "exact.py": "338e8c3f90d510b1489c9d07410e9feead480de00cce84788a6319fa96f1bb35",
+     "gcode.py": "85c697ddb3972a9081ed7b710ed9887ea2142e2033c973002a57c1e8049f46a3",
+     "raster.py": "5849f413ecb12763402c3e27939fb8ae73ef2d95c62cdfe8143c9b46ddce48ce",
+     "voxel.py": "2a06116ea3236692d3329cbd911be0f103b8d07bfae4ce0bb6715a23f5e2341b",
+     "stock.py": "17fba4f7e69ca0893fbdd55549bcc9efdff31a3f5428235372c4dc1044e57986"
+    }
+   }
+  },
+  "env": {
+   "python": "3.12.13",
+   "numpy": "2.5.4",
+   "scipy": "1.18.1",
+   "numba": "0.68.0",
+   "platform": "Linux-6.8.0-1058-nvidia-x86_64-with-glibc2.35"
+  }
+ },
+ "params": {
+  "n": 10000,
+  "seed": 0,
+  "face": "x+",
+  "delta_mm": 0.11,
+  "tol_mm": 0.1,
+  "cell_mm": 0.05
+ },
+ "same_points_as_new": {
+  "13d20b5 cell=0.05": true,
+  "13d20b5 cell=0": true
+ },
+ "analytic_within_pct": 93.478,
+ "truth_sample": {
+  "out": 623,
+  "band": 0,
+  "within_pct_on_sample": 93.77
+ },
+ "variants": {
+  "21a0d91": {
+   "within_pct": 93.77,
+   "excess_area_pct": 6.23,
+   "gouge_area_pct": 0.0,
+   "max_excess_mm": 0.105,
+   "verdict_vs_truth_mismatches": 0,
+   "no_class_points": 0
+  },
+  "13d20b5 cell=0.05": {
+   "within_pct": 100.0,
+   "excess_area_pct": 0.0,
+   "gouge_area_pct": 0.0,
+   "max_excess_mm": 0.075,
+   "verdict_vs_truth_mismatches": 623,
+   "no_class_points": 0
+  },
+  "13d20b5 cell=0": {
+   "within_pct": 93.77,
+   "excess_area_pct": 0.0,
+   "gouge_area_pct": 0.0,
+   "max_excess_mm": 0.1,
+   "verdict_vs_truth_mismatches": 0,
+   "no_class_points": 623
+  }
+ },
+ "p1_new": {
+  "violations": 0,
+  "within_pct": 100.0,
+  "max_abs_dev": 0.0
+ },
+ "exact_compile": {
+  "p8_depth0": {
+   "violations": 0,
+   "band": 141,
+   "points": 10000,
+   "truth_out": 0,
+   "metric_out": 0,
+   "within_pct": 100.0
+  },
+  "p7_flat_horiz": {
+   "violations": 0,
+   "band": 0,
+   "points": 100000,
+   "removed": 66771
+  }
+ },
+ "seconds": {
+  "import_s": 0.23,
+  "metric 21a0d91_s": 0.01,
+  "metric 13d20b5 cell=0.05_s": 0.05,
+  "metric 13d20b5 cell=0_s": 0.01,
+  "p1_s": 0.0,
+  "exact_first_calls_s": 5.66
+ },
+ "passed": true
+}
