@@ -4,3 +4,5 @@ __pycache__/
 *.pyc
 .DS_Store
 .ipynb_checkpoints/
+.numba_cache/
+.pytest_cache/
